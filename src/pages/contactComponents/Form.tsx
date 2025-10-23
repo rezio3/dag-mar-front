@@ -83,13 +83,12 @@ const Form: React.FC = () => {
       <Media query="(min-width: 992px)">
         {(matches) => {
           return matches ? (
-            // <FormDesktop
-            //   control={control}
-            //   fileState={fileState}
-            //   handleFileUpload={handleFileUpload}
-            //   handleSubmit={handleSubmit(onSubmit)}
-            // />
-            <></>
+            <FormDesktop
+              control={control}
+              fileState={fileState}
+              handleFileUpload={handleFileUpload}
+              handleSubmit={handleSubmit(onSubmit)}
+            />
           ) : (
             <div className="m-form-section-container">
               <div className="m-contact-with-us-text-container">
