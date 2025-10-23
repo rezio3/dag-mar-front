@@ -40,14 +40,26 @@ const Map = () => {
                 </div>
                 <div className="address">
                   <h2>Dane kontaktowe</h2>
+                  <h3 className="company-name-header">
+                    <b>
+                      Biuro Tłumaczeń Przysięgłych „DAG-MAR” <br />
+                      Dagmara Toporowska
+                    </b>{" "}
+                  </h3>
                   <p>
-                    <strong>
-                      Biuro Tłumaczeń Przysięgłych „DAG-MAR” Dagmara Toporowska
-                    </strong>{" "}
-                    <br />
                     ul. Karkonoska 1C, 59-300 Lubin <br />
                     tel. +48 76 846 10 64, kom. +48 607 618 567 <br />
                     NIP: 692-172-62-49, Regon: 390770661
+                  </p>
+                </div>
+                <div className="address">
+                  <h3 className="company-name-header">
+                    <b>Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.</b>
+                  </h3>{" "}
+                  <p>
+                    ul. Karkonoska 1C, 59-300 Lubin <br />
+                    tel. +48 76 846 10 64, kom. +48 607 618 567 <br />
+                    NIP: 692-250-69-52,, Regon: 022478167
                   </p>
                 </div>
               </div>
