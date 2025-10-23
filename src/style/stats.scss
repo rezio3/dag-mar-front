@@ -30,22 +30,6 @@
     align-items: center;
   }
 
-  .first-stat {
-    width: 214px;
-  }
-
-  .second-stat {
-    width: 170px;
-  }
-
-  .third-stat {
-    width: 238px;
-  }
-
-  .forth-stat {
-    width: 273px;
-  }
-
   .thousand {
     display: flex;
   }
@@ -77,6 +61,7 @@
     }
 
     .stat-description {
+      text-align: center;
       font-size: 18px;
       font-weight: 400;
       font-family: "Inter", sans-serif;
