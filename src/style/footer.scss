@@ -1,0 +1,335 @@
+@import "./colors";
+
+.footer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 310px;
+	width: 100%;
+	background-color: $washed-white;
+
+	.upper-footer-container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-top: 30px;
+		height: 160px;
+		width: 70%;
+
+		a {
+			text-decoration: none;
+			color: $black;
+		}
+
+		.footer-logo {
+			width: 82px;
+			height: 82px;
+		}
+
+		.footer-address {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			height: 120px;
+			width: 450px;
+			color: $black;
+
+			h2 {
+				font-family: "Lato", sans-serif;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 24px;
+				margin-top: 0px;
+				margin-right: 100px;
+			}
+
+			span {
+				font-family: "Lato", sans-serif;
+				font-size: 15px;
+				font-weight: 400;
+				margin-top: 10px;
+			}
+
+			.footer-contact-number {
+				line-height: 12px;
+			}
+
+			.address {
+				line-height: 24;
+			}
+		}
+		.aboutUs-footer {
+			margin-left: 200px;
+		}
+		.aboutUs-offer-FAQ-translators-footer {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			height: 120px;
+
+			span {
+				font-family: "Lato", sans-serif;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 38px;
+				color: $black;
+			}
+		}
+		.footer-contact-btn {
+			position: relative;
+			top: 0;
+			font-family: "Lato", sans-serif;
+			font-weight: 700;
+			margin: 0;
+			padding: 0;
+			text-transform: none;
+			font-size: 15px;
+			background-color: $red-btn;
+			width: 149px;
+			height: 44px;
+			letter-spacing: 1px;
+			border-radius: 40px;
+			gap: 10px;
+			border: 2px solid rgba(233, 232, 226, 0);
+			transition: 0.3s ease-in-out;
+			color: $washed-white;
+			cursor: pointer;
+		}
+
+		.footer-contact-btn:hover {
+			border: 2px solid $red-btn;
+			background-color: $washed-white;
+			color: $red-btn;
+		}
+	}
+
+	.lower-footer-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 70%;
+		height: 76px;
+		border-top: 1px #cecece solid;
+
+		span {
+			color: $txt;
+			font-family: "Inter", sans-serif;
+			font-size: 12px;
+			letter-spacing: 0.3px;
+		}
+
+		.icons-footer-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 200px;
+			margin-right: 40px;
+			.icon {
+				padding: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.footer-address {
+		margin-left: 20px;
+
+		h2 {
+			width: 300px;
+		}
+	}
+	.footer-container {
+		.upper-footer-container {
+			.aboutUs-footer {
+				margin-left: 0px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1550px) {
+	@-moz-document url-prefix() {
+		.footer-container {
+			.upper-footer-container {
+				width: 80%;
+				.aboutUs-footer {
+					margin-right: 20px;
+				}
+			}
+
+			.lower-footer-container {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1450px) {
+	@-moz-document url-prefix() {
+		.footer-container {
+			.upper-footer-container {
+				width: 85%;
+				.aboutUs-footer {
+					margin-right: 20px;
+				}
+			}
+
+			.lower-footer-container {
+				width: 85%;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.footer-container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		height: 543px;
+		padding-top: 0px;
+		width: 100%;
+		background-color: $washed-white;
+
+		.upper-footer-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			margin-top: 50px;
+			height: 265px;
+
+			width: 85%;
+
+			a {
+				text-decoration: none;
+				color: $black;
+			}
+			.footer-logo-container {
+				display: flex;
+				justify-content: flex-start;
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+
+				.footer-logo {
+					width: 63px;
+					height: 63px;
+				}
+
+				.footer-address {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+					height: 100%;
+					width: 80%;
+					color: $black;
+					margin-left: 20px;
+
+					h2 {
+						font-size: 12px;
+						line-height: 8px;
+						margin: 0;
+						margin-bottom: 20px;
+						width: 100%;
+					}
+
+					span {
+						font-family: "Lato", sans-serif;
+						font-size: 12px;
+						font-weight: 400;
+						margin-top: 0px;
+						line-height: 8px;
+						margin: 5px 0;
+					}
+
+					.footer-contact-number {
+						line-height: 8px;
+					}
+
+					.address {
+						line-height: 8px;
+					}
+				}
+			}
+			.middle-footer-container {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				height: 340px;
+				margin-top: 0px;
+
+				.aboutUs-right {
+					margin-left: 10px;
+				}
+
+				.aboutUs-footer {
+					margin-left: 0px;
+				}
+				.aboutUs-offer-FAQ-translators-footer {
+					height: auto;
+					width: 50%;
+					margin: 20px 0;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+
+					span {
+						font-size: 18px;
+						line-height: 38px;
+						color: $black;
+						margin: 0;
+					}
+				}
+				.footer-contact-btn {
+					width: 149px;
+					height: 44px;
+				}
+
+				.footer-contact-btn:hover {
+					border: 2px solid $red-btn;
+					background-color: $washed-white;
+					color: $red-btn;
+				}
+			}
+		}
+
+		.lower-footer-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 50px;
+			width: 85%;
+			height: 143px;
+			border-top: 1px #cecece solid;
+			margin-bottom: 10px;
+
+			span {
+				color: $txt;
+				font-family: "Inter", sans-serif;
+				font-size: 12px;
+				letter-spacing: 0.3px;
+			}
+
+			.icons-footer-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 0px;
+				margin-top: 20px;
+				.icon {
+					padding: 10px;
+					width: 32px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "LatoLatinWebSemibold";
+  src: url(../fonts/LatoLatin-Semibold.ttf);
+}
+
+@import "./colors";
+
+html {
+  scroll-timeline: custom_name;
+}
+.m-nav-up {
+  height: 50px;
+}
+.m-nav-scrolled {
+  height: 70px;
+}
+
+.m-logo-up {
+  width: 125px;
+  height: 125px;
+}
+
+.m-navigation-contaier {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $claret-dark;
+  transition: height 0.2s ease-in-out;
+  z-index: 2;
+
+  .m-logo-img {
+    position: absolute;
+    background-size: cover;
+    background-image: url(../img/logo.svg);
+    transform: translateY(40px);
+    transition: 0.2s ease-out;
+  }
+  .m-logo-scrolled {
+    width: 130px;
+    height: 130px;
+    background-size: cover;
+    transform: translateY(30px);
+    transition: 0.2s ease-out;
+  }
+
+  .burger-icon-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 40%;
+    width: 45px;
+    height: 45px;
+
+    .fa-bars {
+      color: $washed-white;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    .fa-x {
+      background-size: cover;
+      position: relative;
+      color: $washed-white;
+    }
+
+    .burger-nav-content {
+      position: absolute;
+      right: 0px;
+      top: 50px;
+      height: 400px;
+      width: 200px;
+    }
+  }
+}

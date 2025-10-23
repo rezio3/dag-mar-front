@@ -1,0 +1,116 @@
+@import "./colors";
+
+.who-trusted-us-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 250px;
+  width: 100%;
+  background-color: $white;
+
+  .who-trusted-us-header {
+    margin-top: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  .trusted-logos {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .trusted-logos-animate {
+      margin-top: 45px;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      left: -240px;
+      width: 3300px;
+      animation: tape-logos-animation normal 40s ease-out infinite;
+
+      .logo {
+        margin: 0 30px;
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
+@keyframes tape-logos-animation {
+  0% {
+    left: 0;
+  }
+
+  82% {
+    left: -1150px;
+  }
+
+  90% {
+    left: -1150px;
+  }
+
+  95% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  @keyframes tape-logos-animation {
+    0% {
+      left: 0;
+    }
+
+    82% {
+      left: -1450px;
+    }
+
+    90% {
+      left: -1450px;
+    }
+
+    95% {
+      left: 0;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+}
+@media (max-width: 992px) {
+  @keyframes tape-logos-animation {
+    0% {
+      left: 0;
+    }
+
+    82% {
+      left: -2650px;
+    }
+
+    90% {
+      left: -2650px;
+    }
+
+    95% {
+      left: 0;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+}

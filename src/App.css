@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  height: 100%;
+}
+
+@media (max-width: 1815px) {
+  html,
+  body {
+    zoom: 85%;
+  }
+}
+
+@media (max-width: 1300px) {
+  html,
+  body {
+    zoom: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  html,
+  body {
+    zoom: 100%;
+  }
+}
+
+strong {
+  font-weight: 400;
+}
+
+h1 strong {
+  font-weight: bold;
+}

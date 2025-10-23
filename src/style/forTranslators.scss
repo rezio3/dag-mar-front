@@ -1,0 +1,318 @@
+@import "./colors";
+
+.for-translators-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $white;
+
+  .translators-first-section {
+    width: 75%;
+    margin-top: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .translators-text {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 360px;
+
+      .translators-header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 645px;
+        height: 155px;
+        background-image: url(../img/contact-frame.png);
+        margin-bottom: 28px;
+        padding-left: 58px;
+        color: $black;
+
+        h2 {
+          margin: 0;
+          text-transform: uppercase;
+          font-family: "Lato", sans-serif;
+          font-weight: 700;
+          font-size: 24px;
+          letter-spacing: 1.6px;
+        }
+        h3 {
+          margin: 0;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          font-family: "Lato", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 1px;
+        }
+      }
+
+      p {
+        margin-left: 58px;
+        width: 628px;
+        margin-right: 164px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        color: $txt;
+      }
+    }
+
+    .translators-arc-img {
+      background-image: url(../img/arc-translators.png);
+      background-size: cover;
+      width: 588px;
+      height: 748px;
+
+      .translators-img {
+        background-image: url(../img/two-business-partners-working-office\ 1.png);
+        background-size: cover;
+        width: 528px;
+        height: 737px;
+        margin-top: 35px;
+        transition: 0.5s ease-out;
+      }
+
+      .translators-img:hover {
+        width: 545px;
+        height: 769px;
+        transform: translate(-3%, -3%);
+        z-index: -1;
+      }
+    }
+  }
+
+  .second-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 480px;
+    background-image: url(../img/faq-second-frame.png);
+    background-color: $red-btn;
+    z-index: 1;
+    color: $washed-white;
+
+    h2 {
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    span {
+      margin-top: 8px;
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    .write-us-btn {
+      height: 44px;
+      width: 146px;
+      border-radius: 100px;
+      background: none;
+      border: 1.5px $washed-white solid;
+      color: $washed-white;
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      margin-top: 40px;
+      transition: 0.2s ease-out;
+      cursor: pointer;
+    }
+
+    .write-us-btn:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  @-moz-document url-prefix() {
+    .for-translators-container {
+      .translators-first-section {
+        .translators-text {
+          width: 700px;
+          p {
+            width: 500px;
+          }
+        }
+        .translators-arc-img {
+          .translators-img {
+            background-size: cover;
+            width: 528px;
+            height: 737px;
+            margin-top: 35px;
+            transition: 0.5s ease-out;
+          }
+          .translators-img:hover {
+            width: 528px;
+            height: 737px;
+            transform: translate(0%, 0%);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .for-translators-container {
+    .translators-first-section {
+      .translators-arc-img {
+        .translators-img {
+          background-size: cover;
+          width: 528px;
+          height: 737px;
+          margin-top: 35px;
+          transition: 0.5s ease-out;
+        }
+        .translators-img:hover {
+          width: 528px;
+          height: 737px;
+          transform: translate(0%, 0%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .for-translators-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: $white;
+
+    .translators-first-section {
+      width: 100%;
+      margin-top: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .translators-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 43px;
+
+        .translators-header-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 155px;
+          background-image: url(../img/contact-frame.png);
+          margin-bottom: 28px;
+          padding-left: 0px;
+          color: $black;
+
+          h2 {
+            width: 85%;
+            margin: 0;
+            text-transform: uppercase;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 1.6px;
+          }
+          h3 {
+            width: 85%;
+            margin: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+          }
+        }
+
+        p {
+          margin: 0;
+          width: 85%;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 27px;
+          color: $txt;
+        }
+      }
+
+      .translators-arc-img {
+        background-image: url(../img/arc-translators.png);
+        background-size: cover;
+        width: 300px;
+        height: 382px;
+
+        .translators-img {
+          background-image: url(../img/two-business-partners-working-office\ 1.png);
+          background-size: cover;
+          width: 300px;
+          height: 382px;
+          margin-top: 0px;
+          transition: 0.5s ease-out;
+        }
+
+        .translators-img:hover {
+          width: 300px;
+          height: 382px;
+          transform: translate(0%, 0%);
+          z-index: -1;
+        }
+      }
+    }
+
+    .second-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background-image: url(../img/faq-second-frame.png);
+      background-color: $red-btn;
+      z-index: 1;
+      color: $washed-white;
+
+      h2 {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+      }
+
+      span {
+        width: 85%;
+        margin-top: 8px;
+        text-align: center;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 27px;
+      }
+
+      .write-us-btn {
+        height: 50px;
+        width: 145px;
+      }
+
+      .write-us-btn:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

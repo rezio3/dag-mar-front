@@ -1,0 +1,137 @@
+@import "./colors";
+
+.faq-container {
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: $black;
+
+  .faq-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    margin-bottom: 80px;
+    width: 1089px;
+    height: 200px;
+    background-image: url(../img/faq-frame.png);
+
+    .faq-header {
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .h3 {
+      font-size: 24px;
+    }
+  }
+  .line {
+    // height: 80px;
+    width: 1060px;
+    max-height: fit-content;
+    overflow: hidden;
+    border-bottom: 1px #cecece solid;
+    transition: 0.3s ease-out;
+    .visible-line {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .visible-span-text {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        color: $black;
+      }
+
+      .plus {
+        cursor: pointer;
+        color: $black;
+        opacity: 0.6;
+        padding: 15px;
+        transition: 0.3s ease-out;
+      }
+    }
+
+    .unvisible-line {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        padding-bottom: 15px;
+        color: $txt;
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      ul {
+        margin-top: 10px;
+        li {
+          padding: 0px 0 10px;
+          color: $txt;
+        }
+      }
+    }
+  }
+
+  .rotate {
+    rotate: -45deg;
+  }
+}
+
+#faqLine11Active {
+  border-bottom: none;
+}
+
+@media (max-width: 992px) {
+  .faq-container {
+    .faq-header-container {
+      margin-top: 180px;
+      margin-bottom: 60px;
+      width: 100%;
+      height: 200px;
+      h2 {
+        width: 85%;
+        text-align: start;
+      }
+      .h3 {
+        width: 85%;
+        text-align: start;
+      }
+    }
+    .line {
+      //   height: fit-content;
+      width: 85%;
+      overflow: hidden;
+      border-bottom: 1px #cecece solid;
+
+      .visible-line {
+        height: auto;
+
+        span {
+          margin: 27px 0;
+        }
+      }
+    }
+
+    .unvisible-line {
+      height: 0;
+      transition: 0.3s ease-out;
+    }
+
+    .rotate {
+      rotate: -45deg;
+    }
+  }
+}

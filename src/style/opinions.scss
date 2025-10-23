@@ -1,0 +1,443 @@
+@import "./colors";
+
+.opinions-container-0 {
+  width: 100%;
+  height: 610px;
+
+  .opinions-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white;
+    z-index: 0;
+
+    h2 {
+      text-align: center;
+      line-height: 27px;
+      margin-top: 0;
+    }
+
+    .opinions-header {
+      color: $black;
+      font-family: "Lato", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .carousel-container {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .opinions-description {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 694px;
+        height: 300px;
+        overflow: hidden;
+
+        .opinions-description2 {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          width: 4164px;
+          height: 206px;
+          left: 0;
+
+          .opinion-container {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-width: 694px;
+            height: 166px;
+            margin-top: 10px;
+
+            .opinion {
+              font-family: "Inter", sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 27px;
+              color: $txt;
+              text-align: center;
+              margin: 0;
+              max-width: 694px;
+            }
+
+            .author {
+              font-family: "Inter", sans-serif;
+              font-weight: 400;
+              color: #8d8d8d;
+              font-size: 12px;
+              line-height: 25px;
+              text-align: center;
+              letter-spacing: 1px;
+              margin: 30px 0;
+            }
+          }
+        }
+      }
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      min-width: 54px;
+      border: 1px black solid;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.3;
+      transition: 0.3s ease-out;
+      margin-bottom: 60px;
+      cursor: pointer;
+
+      .arrow {
+        font-size: 60px;
+        cursor: pointer;
+        background-image: url(../img/arrow-down.png);
+        background-color: transparent;
+        border: none;
+        width: 34px;
+        height: 34px;
+        background-size: cover;
+      }
+
+      .left-arrow {
+        rotate: 90deg;
+      }
+
+      .right-arrow {
+        rotate: -90deg;
+      }
+    }
+
+    .carousel-left-arrow {
+      left: 20%;
+    }
+    .carousel-right-arrow {
+      left: 80%;
+    }
+    .carousel-arrow:hover {
+      transform: translateX(-10%);
+      width: 68px;
+      height: 68px;
+    }
+    .segments-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 140px;
+      height: 10px;
+
+      .carousel-segment {
+        opacity: 0.3;
+        width: 7px;
+        height: 7px;
+        border-radius: 50px;
+        background-color: none;
+        border: 1px $txt solid;
+      }
+    }
+  }
+}
+
+.swipe-to-left {
+  animation: swipe-to-left-anim 0.5s forwards;
+}
+.swipe-to-right {
+  animation: swipe-to-right-anim 0.5s forwards;
+}
+
+.swipe-from-right {
+  animation: swipe-from-right-anim 0.5s forwards;
+}
+.swipe-from-left {
+  animation: swipe-from-left-anim 0.5s forwards;
+}
+
+@keyframes swipe-to-left-anim {
+  0% {
+    right: 0px;
+  }
+
+  100% {
+    right: 694px;
+  }
+}
+@keyframes swipe-to-right-anim {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 694px;
+  }
+}
+
+@keyframes swipe-from-right-anim {
+  0% {
+    right: -1338px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+@keyframes swipe-from-left-anim {
+  0% {
+    left: -1338px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@media (max-width: 1300px) {
+  @-moz-document url-prefix() {
+    .opinions-container-0 {
+      .opinions-container {
+        .carousel-left-arrow {
+          left: 15%;
+        }
+        .carousel-right-arrow {
+          left: 85%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .opinions-container-0 {
+    width: 100%;
+    height: 843px;
+
+    .opinions-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: $white;
+      z-index: 0;
+
+      .opinions-header {
+        color: $black;
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+      .carousel-container {
+        height: 480px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .opinions-description {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 359px;
+          height: 500px;
+          overflow: hidden;
+
+          .opinions-description2 {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 4164px;
+            height: 329px;
+            left: 0px;
+
+            .opinion-container {
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              min-width: 100%;
+              height: 409px;
+              margin-top: 40px;
+
+              .opinion {
+                display: flex;
+                align-items: center;
+                height: 400px;
+                font-family: "Inter", sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 27px;
+                color: $txt;
+                text-align: center;
+                margin: 0;
+                max-width: 309px;
+              }
+
+              .author {
+                font-family: "Inter", sans-serif;
+                font-weight: 400;
+                color: #8d8d8d;
+                font-size: 12px;
+                line-height: 25px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 30px 0;
+                width: 85%;
+              }
+            }
+          }
+        }
+      }
+
+      .arrows-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .m-carousel-arrow {
+        position: static;
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        border: 1px black solid;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.3;
+        transition: 0.3s ease-out;
+        margin-bottom: 60px;
+        margin: 0 30px;
+        cursor: pointer;
+
+        .m-arrow {
+          font-size: 60px;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+          background-image: url(../img/arrow-down.svg);
+          background-color: transparent;
+          border: none;
+          opacity: 0.7;
+          max-width: 34px;
+          height: 34px;
+          background-size: cover;
+        }
+
+        .m-left-arrow {
+          rotate: 180deg;
+        }
+
+        .m-right-arrow {
+          rotate: 0deg;
+        }
+      }
+
+      .m-carousel-left-arrow {
+        left: 0%;
+      }
+      .m-carousel-right-arrow {
+        left: 0%;
+      }
+
+      .segments-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 190px;
+        height: 10px;
+
+        .carousel-segment {
+          opacity: 0.3;
+          width: 7px;
+          height: 7px;
+          border-radius: 50px;
+          background-color: none;
+          border: 1px $txt solid;
+          margin-top: 70px;
+        }
+      }
+    }
+  }
+
+  .swipe-to-left {
+    animation: swipe-to-left-anim 0.5s forwards;
+  }
+  .swipe-to-right {
+    animation: swipe-to-right-anim 0.5s forwards;
+  }
+
+  .swipe-from-right {
+    animation: swipe-from-right-anim 0.5s forwards;
+  }
+  .swipe-from-left {
+    animation: swipe-from-left-anim 0.5s forwards;
+  }
+
+  @keyframes swipe-to-left-anim {
+    0% {
+      right: 0px;
+    }
+
+    100% {
+      right: 350px;
+    }
+  }
+  @keyframes swipe-to-right-anim {
+    0% {
+      left: 0px;
+    }
+
+    100% {
+      left: 350px;
+    }
+  }
+
+  @keyframes swipe-from-right-anim {
+    0% {
+      right: -618px;
+    }
+
+    100% {
+      right: 0px;
+    }
+  }
+  @keyframes swipe-from-left-anim {
+    0% {
+      left: -618px;
+    }
+
+    100% {
+      left: 0px;
+    }
+  }
+}
