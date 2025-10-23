@@ -3,6 +3,8 @@ import "../../style/form.scss";
 import Media from "react-media";
 import FormDesktop from "./FormDesktop";
 import "../../style/loading.scss";
+import { Controller, useForm } from "react-hook-form";
+import { useMutation } from "@tanstack/react-query";
 
 export type FileState = {
   isFileLoaded: boolean;
@@ -11,48 +13,52 @@ export type FileState = {
   inputFileValue: string;
 };
 
-export type FormVal = {
+export type ContactFormData = {
   name: string;
   surname: string;
   email: string;
   subject: string;
   message: string;
-  formValid: 0 | 1;
-  formSent: boolean;
 };
 
 const Form: React.FC = () => {
-  const [isLoading /* setIsLoading */] = useState(false);
+  const { control, handleSubmit, reset } = useForm<ContactFormData>({
+    defaultValues: {
+      name: "",
+      surname: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
   const [fileState, setFileState] = useState<FileState>({
     isFileLoaded: false,
     file: null,
     fileName: "",
     inputFileValue: "",
   });
-  const [formVal, setFormVal] = useState<FormVal>({
-    name: "",
-    surname: "",
-    email: "",
-    subject: "",
-    message: "",
-    formValid: 0,
-    formSent: false,
-  });
 
-  const handleInput = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormVal({
-      ...formVal,
-      [e.target.name]: e.target.value,
+  const sendMessage = async (data: ContactFormData) => {
+    const response = await fetch("http://localhost:5000/send-form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
+    if (!response.ok) throw new Error("Failed to send message");
+    return response.json();
   };
 
-  const handleSubmit = async (
-    _e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
-  ) => {
-    console.log("wysłane");
-  };
+  const mutation = useMutation({
+    mutationFn: sendMessage,
+    onSuccess: () => {
+      // tu coś sobie robie
+      reset();
+    },
+    onError: (err: any) => {
+      // tu też coś sobie zrobie
+      console.log(err);
+    },
+  });
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files || e.target.files.length === 0) return;
@@ -70,21 +76,20 @@ const Form: React.FC = () => {
     });
   };
 
+  const onSubmit = (data: ContactFormData) => mutation.mutate(data);
+
   return (
     <>
       <Media query="(min-width: 992px)">
         {(matches) => {
           return matches ? (
-            <FormDesktop
-              handleInput={handleInput}
-              handleSubmit={handleSubmit}
-              formVal={formVal}
-              setFormVal={setFormVal}
-              fileState={fileState}
-              setFileState={setFileState}
-              handleFileUpload={handleFileUpload}
-              isLoading={isLoading}
-            />
+            // <FormDesktop
+            //   control={control}
+            //   fileState={fileState}
+            //   handleFileUpload={handleFileUpload}
+            //   handleSubmit={handleSubmit(onSubmit)}
+            // />
+            <></>
           ) : (
             <div className="m-form-section-container">
               <div className="m-contact-with-us-text-container">
@@ -106,45 +111,66 @@ const Form: React.FC = () => {
               <div className="m-form-container">
                 <form className="m-contact-form">
                   <div className="m-input-container">
-                    <input
+                    <Controller
                       name="name"
-                      type="name"
-                      placeholder="Imię*"
-                      className="-m-name-input m-contact-input"
-                      onChange={handleInput}
-                      value={formVal.name}
+                      control={control}
+                      rules={{ required: true }}
+                      render={({ field }) => (
+                        <input
+                          placeholder="Imię*"
+                          className="-m-name-input m-contact-input"
+                          {...field}
+                        />
+                      )}
                     />
-                    <input
+                    <Controller
                       name="surname"
-                      type="surname"
-                      placeholder="Nazwisko*"
-                      className="m-surname-input m-contact-input"
-                      onChange={handleInput}
-                      value={formVal.surname}
+                      control={control}
+                      rules={{ required: true }}
+                      render={({ field }) => (
+                        <input
+                          placeholder="Nazwisko*"
+                          className="-m-name-input m-contact-input"
+                          {...field}
+                        />
+                      )}
+                    />
+                    <Controller
+                      name="email"
+                      control={control}
+                      rules={{ required: true }}
+                      render={({ field }) => (
+                        <input
+                          placeholder="Adres e-mail*"
+                          className="-m-name-input m-contact-input"
+                          {...field}
+                        />
+                      )}
+                    />
+                    <Controller
+                      name="subject"
+                      control={control}
+                      rules={{ required: true }}
+                      render={({ field }) => (
+                        <input
+                          placeholder="Temat wiadomości*"
+                          className="-m-name-input m-contact-input"
+                          {...field}
+                        />
+                      )}
                     />
 
-                    <input
-                      name="email"
-                      type="email"
-                      placeholder="Adres e-mail*"
-                      className="m-email-input m-contact-input"
-                      onChange={handleInput}
-                      value={formVal.email}
-                    />
-                    <input
-                      name="subject"
-                      type="subject"
-                      placeholder="Temat wiadomości*"
-                      className="m-theme-input m-contact-input"
-                      onChange={handleInput}
-                      value={formVal.subject}
-                    />
-                    <textarea
+                    <Controller
                       name="message"
-                      placeholder="Treść wiadomości*"
-                      className="m-contact-msg m-contact-input"
-                      onChange={handleInput}
-                      value={formVal.message}
+                      control={control}
+                      rules={{ required: true }}
+                      render={({ field }) => (
+                        <textarea
+                          placeholder="Treść wiadomości*"
+                          className="m-contact-msg m-contact-input"
+                          {...field}
+                        />
+                      )}
                     />
                   </div>
 
@@ -192,17 +218,17 @@ const Form: React.FC = () => {
                       <div className="m-send-btn-container">
                         <button
                           className="m-send-btn loading-button"
-                          onClick={handleSubmit}
-                          disabled={isLoading}
+                          onClick={handleSubmit(onSubmit)}
+                          disabled={false}
                         >
                           Prześlij formularz
-                          {isLoading && (
+                          {false && (
                             <div className="loading-overlay">
                               <div className="spinner"></div>
                             </div>
                           )}
                         </button>
-                        <label
+                        {/* <label
                           id="form-error"
                           className={
                             formVal.formValid
@@ -214,7 +240,7 @@ const Form: React.FC = () => {
                             ? "Uzupełnij brakujące pola"
                             : null}
                           {formVal.formSent ? "Formularz przesłany" : null}
-                        </label>
+                        </label> */}
                       </div>
                     </div>
                   </div>

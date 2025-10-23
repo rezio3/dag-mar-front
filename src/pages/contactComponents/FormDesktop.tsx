@@ -1,30 +1,23 @@
 import React from "react";
-import type { FileState, FormVal } from "./Form";
+import type { ContactFormData, FileState } from "./Form";
+import {
+  Controller,
+  type Control,
+  type UseFormHandleSubmit,
+} from "react-hook-form";
 
 type FormDesktopProps = {
-  handleInput: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
-  handleSubmit: (
-    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
-  ) => void;
-  handleFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  formVal: FormVal;
-  setFormVal: React.Dispatch<React.SetStateAction<FormVal>>;
+  control: Control<ContactFormData>;
   fileState: FileState;
-  setFileState: React.Dispatch<React.SetStateAction<FileState>>;
-  isLoading: boolean;
+  handleFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSubmit: ReturnType<UseFormHandleSubmit<ContactFormData>>;
 };
 
 const FormDesktop: React.FC<FormDesktopProps> = ({
-  handleInput,
-  handleSubmit,
-  formVal,
-  // setFormVal,
+  control,
   fileState,
-  // setFileState,
   handleFileUpload,
-  isLoading,
+  handleSubmit,
 }) => {
   return (
     <div className="form-section-container">
@@ -44,47 +37,68 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
       <div className="form-container">
         <form className="contact-form">
           <div className="name-input-container">
-            <input
+            <Controller
               name="name"
-              type="name"
-              placeholder="Imię*"
-              className="name-input contact-input"
-              onChange={handleInput}
-              value={formVal.name}
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <input
+                  placeholder="Imię*"
+                  className="name-input contact-input"
+                  {...field}
+                />
+              )}
             />
-            <input
+            <Controller
               name="surname"
-              type="surname"
-              placeholder="Nazwisko*"
-              className="surname-input contact-input"
-              onChange={handleInput}
-              value={formVal.surname}
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <input
+                  placeholder="Nazwisko*"
+                  className="surname-input contact-input"
+                  {...field}
+                />
+              )}
             />
           </div>
           <div className="email-and-theme-container">
-            <input
+            <Controller
               name="email"
-              type="email"
-              placeholder="Adres e-mail*"
-              className="email-input contact-input"
-              onChange={handleInput}
-              value={formVal.email}
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <input
+                  placeholder="Adres e-mail*"
+                  className="email-input contact-input"
+                  {...field}
+                />
+              )}
             />
-            <input
+            <Controller
               name="subject"
-              type="subject"
-              placeholder="Temat wiadomości*"
-              className="theme-input contact-input"
-              onChange={handleInput}
-              value={formVal.subject}
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <input
+                  placeholder="Temat wiadomości*"
+                  className="theme-input contact-input"
+                  {...field}
+                />
+              )}
             />
           </div>
-          <textarea
+          <Controller
             name="message"
-            placeholder="Treść wiadomości*"
-            className="contact-msg contact-input"
-            onChange={handleInput}
-            value={formVal.message}
+            control={control}
+            rules={{ required: true }}
+            render={({ field }) => (
+              <textarea
+                placeholder="Treść wiadomości*"
+                className="contact-msg contact-input"
+                {...field}
+              />
+            )}
           />
 
           <div className="policy-and-sender-container">
@@ -131,16 +145,16 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
                 <button
                   className="send-btn loading-button"
                   onClick={handleSubmit}
-                  disabled={isLoading}
+                  disabled={false}
                 >
                   Prześlij formularz
-                  {isLoading && (
+                  {/* {isLoading && (
                     <div className="loading-overlay">
                       <div className="spinner"></div>
                     </div>
-                  )}
+                  )} */}
                 </button>
-                <label
+                {/* <label
                   id="form-error"
                   className={
                     formVal.formValid
@@ -150,7 +164,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
                 >
                   {formVal.formValid ? "Uzupełnij brakujące pola" : null}
                   {formVal.formSent ? "Formularz przesłany" : null}
-                </label>
+                </label> */}
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Offer from "../pages/Offer";
 import Fortranslators from "../pages/Fortranslators";
 import Faq from "../pages/Faq";
 import Contact from "../pages/Contact";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const Page = () => {
   window.onscroll = () => {
@@ -21,17 +22,20 @@ const Page = () => {
       logo.classList.remove("logo-scrolled");
     }
   };
-
+  const queryClient = new QueryClient();
   return (
-    <div className="page-container">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/offer" element={<Offer />} />
-        <Route path="/fortranslators" element={<Fortranslators />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="page-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/offer" element={<Offer />} />
+          <Route path="/fortranslators" element={<Fortranslators />} />
+          <Route path="/faq" element={<Faq />} />
+
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </QueryClientProvider>
   );
 };
 

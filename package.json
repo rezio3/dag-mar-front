@@ -12,8 +12,10 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.7",
     "@react-spring/web": "^10.0.3",
+    "@tanstack/react-query": "^5.90.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-hook-form": "^7.65.0",
     "react-media": "^1.10.0",
     "react-router-dom": "^7.9.4",
     "react-use-window-scroll": "^1.1.8"
