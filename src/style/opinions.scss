@@ -1,4 +1,4 @@
-@import "./colors";
+@use "./colors";
 
 .opinions-container-0 {
   width: 100%;
@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: $white;
+    background-color: colors.$white;
     z-index: 0;
 
     h2 {
@@ -21,7 +21,7 @@
     }
 
     .opinions-header {
-      color: $black;
+      color: colors.$black;
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 1.6px;
@@ -70,7 +70,7 @@
               font-size: 16px;
               font-weight: 400;
               line-height: 27px;
-              color: $txt;
+              color: colors.$txt;
               text-align: center;
               margin: 0;
               max-width: 694px;
@@ -151,7 +151,7 @@
         height: 7px;
         border-radius: 50px;
         background-color: none;
-        border: 1px $txt solid;
+        border: 1px colors.$txt solid;
       }
     }
   }
@@ -236,11 +236,11 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-color: $white;
+      background-color: colors.$white;
       z-index: 0;
 
       .opinions-header {
-        color: $black;
+        color: colors.$black;
         font-family: "Lato", sans-serif;
         text-transform: uppercase;
         letter-spacing: 1.6px;
@@ -293,7 +293,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 27px;
-                color: $txt;
+                color: colors.$txt;
                 text-align: center;
                 margin: 0;
                 max-width: 309px;
@@ -382,7 +382,7 @@
           height: 7px;
           border-radius: 50px;
           background-color: none;
-          border: 1px $txt solid;
+          border: 1px colors.$txt solid;
           margin-top: 70px;
         }
       }

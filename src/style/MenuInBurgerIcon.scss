@@ -1,108 +1,108 @@
-@import "../style/colors";
+@use "../style/colors";
 
 .burger-nav-content {
-	width: 100%;
-	height: 100vh;
-	background-color: $claret-dark;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: colors.$claret-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-	.x-container {
-		width: 85%;
-		display: flex;
-		justify-content: flex-end;
+  .x-container {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
 
-		.x-button {
-			position: relative;
-			padding: 5px;
-			top: 20px;
-		}
-	}
+    .x-button {
+      position: relative;
+      padding: 5px;
+      top: 20px;
+    }
+  }
 
-	.buttons-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: flex-start;
-		width: 85%;
-		height: 80%;
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 85%;
+    height: 80%;
 
-		.m-nav-btn-desktop {
-			width: 100%;
+    .m-nav-btn-desktop {
+      width: 100%;
 
-			.button-container {
-				border-bottom: 1px solid #6c090a;
-				width: 100%;
+      .button-container {
+        border-bottom: 1px solid #6c090a;
+        width: 100%;
 
-				.m-navbtn {
-					background: none;
-					border: none;
-					color: $washed-white;
-					text-transform: uppercase;
-					font-family: "Lato", sans-serif;
-					font-weight: 600;
-					font-size: 16px;
-					letter-spacing: 1px;
-					padding: 30px 0;
-				}
+        .m-navbtn {
+          background: none;
+          border: none;
+          color: colors.$washed-white;
+          text-transform: uppercase;
+          font-family: "Lato", sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          letter-spacing: 1px;
+          padding: 30px 0;
+        }
 
-				.material-symbols-outlined {
-					color: $washed-white;
-					position: relative;
-					top: 5px;
-				}
-			}
-		}
-		.languages-container {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			padding: 30px 0;
-			text-transform: uppercase;
-			font-family: "Lato", sans-serif;
-			font-weight: 600;
-			font-size: 16px;
-			letter-spacing: 1px;
+        .material-symbols-outlined {
+          color: colors.$washed-white;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+    .languages-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 0;
+      text-transform: uppercase;
+      font-family: "Lato", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 1px;
 
-			span {
-				color: $washed-white;
-			}
-		}
+      span {
+        color: colors.$washed-white;
+      }
+    }
 
-		.m-contact-button {
-			text-align: center;
-			margin-top: 20px;
-			padding: 0;
-			text-transform: none;
-			color: $washed-white;
-			background-color: $red-btn;
-			width: 159px;
-			height: 54px;
-			font-family: "Lato", sans-serif;
-			font-weight: 700;
-			font-size: 16px;
-			letter-spacing: 1px;
-			border-radius: 40px;
-			gap: 10px;
-			border: 2px solid rgba(233, 232, 226, 1);
-			transition: 0.3s ease-in-out;
-		}
+    .m-contact-button {
+      text-align: center;
+      margin-top: 20px;
+      padding: 0;
+      text-transform: none;
+      color: colors.$washed-white;
+      background-color: colors.$red-btn;
+      width: 159px;
+      height: 54px;
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 1px;
+      border-radius: 40px;
+      gap: 10px;
+      border: 2px solid rgba(233, 232, 226, 1);
+      transition: 0.3s ease-in-out;
+    }
 
-		.m-contact-button:hover {
-			border: 2px solid rgba(233, 232, 226, 1);
-			animation: contact-hover 0.3s ease-in-out;
-		}
-	}
+    .m-contact-button:hover {
+      border: 2px solid rgba(233, 232, 226, 1);
+      animation: contact-hover 0.3s ease-in-out;
+    }
+  }
 }
 
 @media (min-width: 500px) {
-	.burger-nav-content {
-		height: 100%;
+  .burger-nav-content {
+    height: 100%;
 
-		.m-contact-button {
-			margin-bottom: 50px;
-		}
-	}
+    .m-contact-button {
+      margin-bottom: 50px;
+    }
+  }
 }

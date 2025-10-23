@@ -1,6 +1,6 @@
-@import "./colors";
+@use "./colors";
 
 .contact-container {
-  background-color: $white;
+  background-color: colors.$white;
   width: 100%;
 }

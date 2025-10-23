@@ -8,15 +8,14 @@ const TranslatorsFirstSection = () => {
         </div>
         <p className="translators-txt">
           Biuro Tłumaczeń Przysięgłych „DAG-MAR” skupia wokół siebie{" "}
-          <strong>zespół Tłumaczy</strong> <br />z wieloletnim doświadczeniem.
-          Wobec stale rosnących wymagań i oczekiwań naszych Klientów decydujemy
-          się na współpracę tylko z prawdziwymi profesjonalistami w swojej
-          branży.
+          <strong>zespół Tłumaczy</strong> z wieloletnim doświadczeniem. Wobec
+          stale rosnących wymagań i oczekiwań naszych Klientów decydujemy się na
+          współpracę tylko z prawdziwymi profesjonalistami w swojej branży.
         </p>
         <p>
           Zapewniamy materiały do <strong>tłumaczenia</strong>, uczciwe stawki
           za wykonaną pracę, rozliczenia na czas, a także rekomendacje i
-          polecenie innym pracodawcom <br />w przyszłości.
+          polecenie innym pracodawcom w przyszłości.
         </p>
       </div>
       <div className="translators-arc-img">

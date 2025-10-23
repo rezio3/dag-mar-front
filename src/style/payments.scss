@@ -1,149 +1,149 @@
-@import "./colors";
+@use "./colors";
 
 .payments-container {
-	background-color: $white;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	margin-bottom: 10px;
+  background-color: colors.$white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 
-	h2 {
-		margin-top: 100px;
-		text-transform: uppercase;
-		margin-bottom: 65px;
-	}
+  h2 {
+    margin-top: 100px;
+    text-transform: uppercase;
+    margin-bottom: 65px;
+  }
 
-	.linePayments {
-		width: 1060px;
-		overflow: hidden;
-		border-bottom: 1px #cecece solid;
-		transition: 0.3s ease-out;
+  .linePayments {
+    width: 1060px;
+    overflow: hidden;
+    border-bottom: 1px #cecece solid;
+    transition: 0.3s ease-out;
 
-		.visible-line {
-			height: 80px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+    .visible-line {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-			.visible-span-text {
-				font-family: "Inter", sans-serif;
-				font-weight: 600;
-				font-size: 16px;
-				letter-spacing: 0.3px;
-				color: $black;
-			}
+      .visible-span-text {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        color: colors.$black;
+      }
 
-			.plus {
-				cursor: pointer;
-				color: $black;
-				opacity: 0.6;
-				padding: 15px;
-				transition: 0.3s ease-out;
-			}
-		}
+      .plus {
+        cursor: pointer;
+        color: colors.$black;
+        opacity: 0.6;
+        padding: 15px;
+        transition: 0.3s ease-out;
+      }
+    }
 
-		.unvisible-line {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
+    .unvisible-line {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
 
-			p {
-				margin-bottom: 45px;
-				color: $txt;
-				height: 80px;
-				width: 100%;
-				font-family: "Inter", sans-serif;
-				font-weight: 400;
-				font-size: 16px;
-				line-height: 25px;
-			}
-			span{
-				font-weight: 700;
-			}
-		}
-	}
+      p {
+        margin-bottom: 45px;
+        color: colors.$txt;
+        height: 80px;
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+  }
 
-	.linePayments:last-child {
-		margin-bottom: 150px;
-		border-bottom: none;
-	}
+  .linePayments:last-child {
+    margin-bottom: 150px;
+    border-bottom: none;
+  }
 
-	.rotate {
-		rotate: -45deg;
-	}
+  .rotate {
+    rotate: -45deg;
+  }
 }
 
 @media (max-width: 992px) {
-	.payments-container {
-		background-color: $white;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
-		margin-bottom: 10px;
+  .payments-container {
+    background-color: colors.$white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
 
-		h2 {
-			margin-top: 63px;
-			text-transform: uppercase;
-			margin-bottom: 46px;
-		}
+    h2 {
+      margin-top: 63px;
+      text-transform: uppercase;
+      margin-bottom: 46px;
+    }
 
-		.linePayments {
-			width: 85%;
-			overflow: hidden;
-			border-bottom: 1px #cecece solid;
-			transition: 0.3s ease-out;
+    .linePayments {
+      width: 85%;
+      overflow: hidden;
+      border-bottom: 1px #cecece solid;
+      transition: 0.3s ease-out;
 
-			.visible-line {
-				height: 80px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
+      .visible-line {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-				.visible-span-text {
-					font-family: "Inter", sans-serif;
-					font-weight: 600;
-					font-size: 16px;
-					letter-spacing: 0.3px;
-					color: $black;
-				}
+        .visible-span-text {
+          font-family: "Inter", sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          letter-spacing: 0.3px;
+          color: colors.$black;
+        }
 
-				.plus {
-					cursor: pointer;
-					color: $black;
-					opacity: 0.6;
-					padding: 15px;
-					transition: 0.3s ease-out;
-				}
-			}
+        .plus {
+          cursor: pointer;
+          color: colors.$black;
+          opacity: 0.6;
+          padding: 15px;
+          transition: 0.3s ease-out;
+        }
+      }
 
-			.unvisible-line {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
+      .unvisible-line {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-				p {
-					color: $txt;
-					height: 80px;
-					width: 100%;
-					font-family: "Inter", sans-serif;
-					font-weight: 400;
-					font-size: 16px;
-				}
-			}
-		}
+        p {
+          color: colors.$txt;
+          height: 80px;
+          width: 100%;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
 
-		.linePayments:last-child {
-			margin-bottom: 61px;
-			border-bottom: none;
-		}
+    .linePayments:last-child {
+      margin-bottom: 61px;
+      border-bottom: none;
+    }
 
-		.rotate {
-			rotate: -45deg;
-		}
-	}
+    .rotate {
+      rotate: -45deg;
+    }
+  }
 }

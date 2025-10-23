@@ -6,6 +6,7 @@ import googleIcon from "../img/GoogleIcon.svg";
 import Media from "react-media";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <Media query="(min-width: 992px)">
@@ -48,7 +49,7 @@ const Footer = () => {
                 </NavLink>
               </div>
               <div className="lower-footer-container">
-                <span>Copyright &copy; 2022 DAG-MAR</span>
+                <span>Copyright &copy; {currentYear} DAG-MAR</span>
                 <div className="icons-footer-container">
                   <img src={fbIcon} alt="Facebook Icon" className="icon" />
                   <img src={googleIcon} alt="Google Icon" className="icon" />
@@ -106,7 +107,7 @@ const Footer = () => {
                 </div>
 
                 <span>Polityka prywatności</span>
-                <span>Copyright &copy; 2022 DAG-MAR</span>
+                <span>Copyright &copy; {currentYear} DAG-MAR</span>
               </div>
             </footer>
           );

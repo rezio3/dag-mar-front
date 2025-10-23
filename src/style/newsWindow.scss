@@ -1,10 +1,10 @@
-@import "./colors";
+@use "./colors";
 
 .news-container {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  background-color: $claret-dark;
+  background-color: colors.$claret-dark;
   width: auto;
   max-width: 800px;
   height: auto;
@@ -13,7 +13,7 @@
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  color: $washed-white;
+  color: colors.$washed-white;
   font-family: "Inter", sans-serif;
   opacity: 0.8;
   z-index: 100;
@@ -36,8 +36,8 @@
     margin-bottom: 40px;
     border-radius: 100px;
     background: none;
-    border: 1.5px $washed-white solid;
-    color: $washed-white;
+    border: 1.5px colors.$washed-white solid;
+    color: colors.$washed-white;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 16px;

@@ -11,6 +11,7 @@ type FormDesktopProps = {
   fileState: FileState;
   handleFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: ReturnType<UseFormHandleSubmit<ContactFormData>>;
+  isPending: boolean;
 };
 
 const FormDesktop: React.FC<FormDesktopProps> = ({
@@ -18,6 +19,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
   fileState,
   handleFileUpload,
   handleSubmit,
+  isPending,
 }) => {
   return (
     <div className="form-section-container">
@@ -40,7 +42,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
             <Controller
               name="name"
               control={control}
-              rules={{ required: true }}
+              // rules={{ required: true }}
               render={({ field }) => (
                 <input
                   placeholder="Imię*"
@@ -52,7 +54,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
             <Controller
               name="surname"
               control={control}
-              rules={{ required: true }}
+              // rules={{ required: true }}
               render={({ field }) => (
                 <input
                   placeholder="Nazwisko*"
@@ -66,7 +68,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
             <Controller
               name="email"
               control={control}
-              rules={{ required: true }}
+              // rules={{ required: true }}
               render={({ field }) => (
                 <input
                   placeholder="Adres e-mail*"
@@ -78,7 +80,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
             <Controller
               name="subject"
               control={control}
-              rules={{ required: true }}
+              // rules={{ required: true }}
               render={({ field }) => (
                 <input
                   placeholder="Temat wiadomości*"
@@ -91,7 +93,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
           <Controller
             name="message"
             control={control}
-            rules={{ required: true }}
+            // rules={{ required: true }}
             render={({ field }) => (
               <textarea
                 placeholder="Treść wiadomości*"
@@ -145,26 +147,15 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
                 <button
                   className="send-btn loading-button"
                   onClick={handleSubmit}
-                  disabled={false}
+                  disabled={isPending}
                 >
                   Prześlij formularz
-                  {/* {isLoading && (
+                  {isPending && (
                     <div className="loading-overlay">
                       <div className="spinner"></div>
                     </div>
-                  )} */}
+                  )}
                 </button>
-                {/* <label
-                  id="form-error"
-                  className={
-                    formVal.formValid
-                      ? "form-error form-error-active"
-                      : "form-error form-sent"
-                  }
-                >
-                  {formVal.formValid ? "Uzupełnij brakujące pola" : null}
-                  {formVal.formSent ? "Formularz przesłany" : null}
-                </label> */}
               </div>
             </div>
           </div>

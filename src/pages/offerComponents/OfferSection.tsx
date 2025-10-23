@@ -37,17 +37,25 @@ const OfferSection = () => {
 
   const buttonHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget as HTMLButtonElement;
-    const id = target.id; // teraz TS wie, że id jest stringiem
+    const id = target.id;
     setOffer(Number(id[id.length - 1]));
   };
   const offerSectionToDisplay = offers[offer];
   const buttonHandlerMobile = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget as HTMLButtonElement;
-    const id = target.id;
-    setOfferMobile({
-      ...offerMobile,
-      [id]: true,
-    });
+    const id = target.id as keyof typeof offerMobile; // "offer0" | "offer1" | ...
+
+    const newState: typeof offerMobile = {
+      offer0: false,
+      offer1: false,
+      offer2: false,
+      offer3: false,
+      offer4: false,
+    };
+
+    newState[id] = true;
+
+    setOfferMobile(newState);
   };
   return (
     <>

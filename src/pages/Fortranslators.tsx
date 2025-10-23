@@ -16,11 +16,10 @@ const Fortranslators = () => {
                 <span>
                   Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej{" "}
                   <strong>języków obcych</strong>, swobodnie posługuje się
-                  językiem polskim, ma przynajmniej kilkuletnie <br />
-                  doświadczenie w <strong>tłumaczeniu dokumentów</strong>, jest
-                  osobą odpowiedzialną, solidną, dyspozycyjną, pracującą
-                  samodzielnie lub potrafiącą
-                  <br /> włączyć się do zespołu i jest zainteresowana/y
+                  językiem polskim, ma przynajmniej kilkuletnie doświadczenie w{" "}
+                  <strong>tłumaczeniu dokumentów</strong>, jest osobą
+                  odpowiedzialną, solidną, dyspozycyjną, pracującą samodzielnie
+                  lub potrafiącą włączyć się do zespołu i jest zainteresowana/y
                   podjęciem współpracy z naszym Biurem zapraszamy do kontaktu.
                 </span>
                 <NavLink to="/contact" className="nav-btn-desktop">

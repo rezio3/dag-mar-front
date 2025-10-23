@@ -5,6 +5,8 @@ import FormDesktop from "./FormDesktop";
 import "../../style/loading.scss";
 import { Controller, useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
+import { baseUrl } from "../../baseUrl";
+import { Alert, Snackbar, type SnackbarCloseReason } from "@mui/material";
 
 export type FileState = {
   isFileLoaded: boolean;
@@ -39,23 +41,44 @@ const Form: React.FC = () => {
   });
 
   const sendMessage = async (data: ContactFormData) => {
-    const response = await fetch("http://localhost:5000/send-form", {
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("surname", data.surname);
+    formData.append("email", data.email);
+    formData.append("subject", data.subject);
+    formData.append("message", data.message);
+
+    if (fileState.file) {
+      formData.append("file", fileState.file);
+    }
+    const response = await fetch(`${baseUrl}send-form`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: formData,
     });
+
     if (!response.ok) throw new Error("Failed to send message");
     return response.json();
   };
-
-  const mutation = useMutation({
+  const [openError, setOpenError] = React.useState(false);
+  const [openSuccess, setOpenSuccess] = React.useState(false);
+  const [errorText, setErrorText] = useState("");
+  const { mutate, isPending } = useMutation({
     mutationFn: sendMessage,
     onSuccess: () => {
       // tu coś sobie robie
+      setOpenSuccess(true);
+      setFileState({
+        isFileLoaded: false,
+        file: null,
+        fileName: "",
+        inputFileValue: "",
+      });
       reset();
     },
     onError: (err: any) => {
       // tu też coś sobie zrobie
+      setOpenError(true);
+      setErrorText("Coś poszło nie tak, spróbuj ponownie później.");
       console.log(err);
     },
   });
@@ -76,7 +99,30 @@ const Form: React.FC = () => {
     });
   };
 
-  const onSubmit = (data: ContactFormData) => mutation.mutate(data);
+  const onSubmit = (data: ContactFormData) => {
+    const hasEmptyField = Object.values(data).some(
+      (value) => typeof value === "string" && value.trim() === ""
+    );
+
+    if (hasEmptyField) {
+      console.log("Brakuje wymaganych pól!");
+      setErrorText("Wszystkie pola formularza są wymagane");
+      setOpenError(true);
+      return;
+    }
+    return mutate(data);
+  };
+
+  const handleClose = (
+    _event?: React.SyntheticEvent | Event,
+    reason?: SnackbarCloseReason
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenError(false);
+    setOpenSuccess(false);
+  };
 
   return (
     <>
@@ -88,6 +134,7 @@ const Form: React.FC = () => {
               fileState={fileState}
               handleFileUpload={handleFileUpload}
               handleSubmit={handleSubmit(onSubmit)}
+              isPending={isPending}
             />
           ) : (
             <div className="m-form-section-container">
@@ -99,7 +146,8 @@ const Form: React.FC = () => {
                 </div>
                 <span className="m-contact-with-us-bottomtext">
                   Masz pytania lub wątpliwości? Chcesz dowiedzieć się więcej o
-                  usługach <strong>Biura Tłumaczeń Przysięgłych DAG-MAR</strong>
+                  usługach{" "}
+                  <strong>Biura Tłumaczeń Przysięgłych DAG-MAR </strong>
                   lub potrzebujesz wysłać materiały do{" "}
                   <strong>tłumaczenia</strong>?
                 </span>
@@ -108,12 +156,12 @@ const Form: React.FC = () => {
                 </span>
               </div>
               <div className="m-form-container">
-                <form className="m-contact-form">
+                <div className="m-contact-form">
                   <div className="m-input-container">
                     <Controller
                       name="name"
                       control={control}
-                      rules={{ required: true }}
+                      // rules={{ required: true }}
                       render={({ field }) => (
                         <input
                           placeholder="Imię*"
@@ -125,7 +173,7 @@ const Form: React.FC = () => {
                     <Controller
                       name="surname"
                       control={control}
-                      rules={{ required: true }}
+                      // rules={{ required: true }}
                       render={({ field }) => (
                         <input
                           placeholder="Nazwisko*"
@@ -137,7 +185,7 @@ const Form: React.FC = () => {
                     <Controller
                       name="email"
                       control={control}
-                      rules={{ required: true }}
+                      // rules={{ required: true }}
                       render={({ field }) => (
                         <input
                           placeholder="Adres e-mail*"
@@ -149,7 +197,7 @@ const Form: React.FC = () => {
                     <Controller
                       name="subject"
                       control={control}
-                      rules={{ required: true }}
+                      // rules={{ required: true }}
                       render={({ field }) => (
                         <input
                           placeholder="Temat wiadomości*"
@@ -162,7 +210,7 @@ const Form: React.FC = () => {
                     <Controller
                       name="message"
                       control={control}
-                      rules={{ required: true }}
+                      // rules={{ required: true }}
                       render={({ field }) => (
                         <textarea
                           placeholder="Treść wiadomości*"
@@ -218,37 +266,56 @@ const Form: React.FC = () => {
                         <button
                           className="m-send-btn loading-button"
                           onClick={handleSubmit(onSubmit)}
-                          disabled={false}
+                          disabled={isPending}
                         >
                           Prześlij formularz
-                          {false && (
+                          {isPending && (
                             <div className="loading-overlay">
                               <div className="spinner"></div>
                             </div>
                           )}
                         </button>
-                        {/* <label
-                          id="form-error"
-                          className={
-                            formVal.formValid
-                              ? "m-form-error m-form-error-active"
-                              : "m-form-error m-form-sent"
-                          }
-                        >
-                          {formVal.formValid
-                            ? "Uzupełnij brakujące pola"
-                            : null}
-                          {formVal.formSent ? "Formularz przesłany" : null}
-                        </label> */}
                       </div>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           );
         }}
       </Media>
+      <Snackbar
+        open={openError}
+        autoHideDuration={2000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        style={{ marginTop: "80px" }}
+      >
+        <Alert
+          onClose={handleClose}
+          severity="error"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          {errorText}
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={openSuccess}
+        autoHideDuration={2000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        style={{ marginTop: "80px" }}
+      >
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          Wiadomość została wysłana
+        </Alert>
+      </Snackbar>
     </>
   );
 };

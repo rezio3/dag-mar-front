@@ -1,8 +1,8 @@
+@use "./colors";
 @font-face {
   font-family: "LatoLatinWebSemibold";
   src: url(../fonts/LatoLatin-Semibold.ttf);
 }
-@import "./colors";
 
 .page-container {
   display: flex;
@@ -32,7 +32,7 @@
     h1 {
       margin-top: 40px;
       font-size: 55px;
-      color: $black;
+      color: colors.$black;
       font-family: "Lato", sans-serif;
       font-weight: 700;
     }
@@ -42,7 +42,7 @@
       font-weight: 400;
       width: 676px;
       font-size: 22px;
-      color: $txt;
+      color: colors.$txt;
       line-height: 34px;
     }
 
@@ -106,7 +106,7 @@
 @media (max-width: 992px) {
   .page-container {
     width: 100%;
-    background-color: $white;
+    background-color: colors.$white;
   }
   .header-container {
     display: flex;
@@ -136,7 +136,7 @@
       h1 {
         margin-top: 40px;
         font-size: 26px;
-        color: $black;
+        color: colors.$black;
         font-family: "Lato", sans-serif;
         font-weight: 700;
       }
@@ -147,7 +147,7 @@
         font-weight: 400;
         width: 100%;
         font-size: 16px;
-        color: $txt;
+        color: colors.$txt;
         line-height: 24px;
       }
 

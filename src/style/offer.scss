@@ -1,13 +1,13 @@
-@import "./colors";
+@use "./colors";
 
 .offer-container {
-  background-color: $white;
+  background-color: colors.$white;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: $black;
+  color: colors.$black;
 
   .offer-header-container {
     display: flex;
@@ -21,6 +21,7 @@
     background-image: url(../img//faq-frame.png);
 
     .offer-header {
+      text-align: center;
       font-family: "Lato", sans-serif;
       font-weight: 700;
       font-size: 16px;
@@ -66,8 +67,8 @@
       padding-top: 0;
     }
     .active {
-      color: $black;
-      border-bottom: 1px solid $black;
+      color: colors.$black;
+      border-bottom: 1px solid colors.$black;
     }
   }
   .right-box {
@@ -79,7 +80,7 @@
         display: block;
         margin-bottom: 20px;
         font-size: 16px;
-        color: $txt;
+        color: colors.$txt;
         line-height: 32px;
       }
     }
@@ -91,7 +92,7 @@
         li {
           padding: 5px 0;
           font-size: 16px;
-          color: $txt;
+          color: colors.$txt;
           line-height: 32px;
         }
       }
@@ -146,10 +147,10 @@
 
 .right-box-mobile {
   margin-bottom: 20px;
-  color: $txt;
+  color: colors.$txt;
   ul {
     li {
-      color: $txt;
+      color: colors.$txt;
     }
   }
 }

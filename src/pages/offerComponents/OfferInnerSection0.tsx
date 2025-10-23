@@ -6,8 +6,8 @@ const OfferInnerSection0 = () => {
       <div className="offer-section-container__right-box right-box right-box-mobile">
         <div className="right-box__inner">
           <span>
-            Obsługujemy tłumaczenia w niemal każdym języku europejskim
-            i&nbsp;nie tylko, a&nbsp;wśród nich:
+            Obsługujemy tłumaczenia w niemal każdym języku europejskim i nie
+            tylko, a wśród nich:
           </span>
           <div className="right-box__list-container">
             <ul>

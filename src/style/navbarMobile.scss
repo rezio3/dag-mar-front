@@ -1,9 +1,8 @@
+@use "./colors";
 @font-face {
   font-family: "LatoLatinWebSemibold";
   src: url(../fonts/LatoLatin-Semibold.ttf);
 }
-
-@import "./colors";
 
 html {
   scroll-timeline: custom_name;
@@ -26,7 +25,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: $claret-dark;
+  background-color: colors.$claret-dark;
   transition: height 0.2s ease-in-out;
   z-index: 2;
 
@@ -56,7 +55,7 @@ html {
     height: 45px;
 
     .fa-bars {
-      color: $washed-white;
+      color: colors.$washed-white;
       padding: 20px;
       cursor: pointer;
     }
@@ -64,7 +63,7 @@ html {
     .fa-x {
       background-size: cover;
       position: relative;
-      color: $washed-white;
+      color: colors.$washed-white;
     }
 
     .burger-nav-content {

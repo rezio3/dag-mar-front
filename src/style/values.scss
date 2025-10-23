@@ -1,4 +1,4 @@
-@import "./colors";
+@use "./colors";
 
 .values-we-offer-container {
   display: flex;
@@ -15,7 +15,7 @@
     margin-top: 0;
     text-align: center;
     font-size: 24px;
-    color: $washed-white;
+    color: colors.$washed-white;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     letter-spacing: 1.6px;
@@ -109,7 +109,7 @@
         font-size: 19px;
         font-weight: 400;
         font-style: normal;
-        color: $washed-white;
+        color: colors.$washed-white;
         line-height: 45.6px;
       }
     }
@@ -131,7 +131,7 @@
       margin-top: 0;
       text-align: center;
       font-size: 24px;
-      color: $washed-white;
+      color: colors.$washed-white;
       font-family: "Lato", sans-serif;
       font-weight: 700;
       letter-spacing: 1.6px;
@@ -229,7 +229,7 @@
           font-size: 19px;
           font-weight: 400;
           font-style: normal;
-          color: $washed-white;
+          color: colors.$washed-white;
           line-height: 45.6px;
         }
       }
