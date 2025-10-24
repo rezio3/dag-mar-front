@@ -21,8 +21,8 @@ const Footer = () => {
                 />
                 <div className="footer-address">
                   <h2>Biuro Tłumaczeń Przysięgłych DAG-MAR</h2>
+                  <span>ul. Karkonoska 1C, 59-300 Lubin</span>
                   <span className="footer-contact-number">+48 607 618 567</span>
-                  <span>Karkonoska 1C, 59-300 Lubin</span>
                 </div>
                 <div className="aboutUs-offer-FAQ-translators-footer aboutUs-footer">
                   <NavLink to="/" end className="nav-btn-desktop">
@@ -86,10 +86,10 @@ const Footer = () => {
                   />
                   <div className="footer-address">
                     <h2>Biuro Tłumaczeń Przysięgłych DAG-MAR</h2>
+                    <span>ul. Karkonoska 1C, 59-300 Lubin</span>
                     <span className="footer-contact-number">
                       +48 607 618 567
                     </span>
-                    <span>Karkonoska 1C, 59-300 Lubin</span>
                   </div>
                 </div>
                 <div className="middle-footer-container">
