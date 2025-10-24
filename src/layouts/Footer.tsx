@@ -42,6 +42,12 @@ const Footer = () => {
                   <NavLink to="/faq" className="nav-btn-desktop">
                     <span className="footer-link">FAQ</span>
                   </NavLink>
+                  <a
+                    href="https://g.page/r/CbDi03cXppgWEB0/review"
+                    target="_blank"
+                  >
+                    <span className="footer-link">Dodaj opinie</span>
+                  </a>
                 </div>
 
                 <NavLink to="/contact" className="nav-btn-desktop">
@@ -106,6 +112,12 @@ const Footer = () => {
                     <NavLink to="/faq" className="nav-btn-desktop">
                       <span className="footer-link">FAQ</span>
                     </NavLink>
+                    <a
+                      href="https://g.page/r/CbDi03cXppgWEB0/review"
+                      target="_blank"
+                    >
+                      <span className="footer-link">Dodaj opinie</span>
+                    </a>
                   </div>
                 </div>
                 <NavLink to="/contact" className="nav-btn-desktop">
