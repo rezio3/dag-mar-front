@@ -46,7 +46,7 @@ const Footer = () => {
                     href="https://g.page/r/CbDi03cXppgWEB0/review"
                     target="_blank"
                   >
-                    <span className="footer-link">Dodaj opinie</span>
+                    <span className="footer-link">Oceń nas</span>
                   </a>
                 </div>
 
@@ -116,7 +116,7 @@ const Footer = () => {
                       href="https://g.page/r/CbDi03cXppgWEB0/review"
                       target="_blank"
                     >
-                      <span className="footer-link">Dodaj opinie</span>
+                      <span className="footer-link">Oceń nas</span>
                     </a>
                   </div>
                 </div>
