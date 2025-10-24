@@ -11,23 +11,30 @@ import logo9 from "../../img/logo9.png";
 import logo10 from "../../img/logo10.png";
 import logo11 from "../../img/logo11.png";
 
+const logos = [
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  logo9,
+  logo10,
+  logo11,
+];
+
 const WhoTrustedUs = () => {
   return (
     <div className="who-trusted-us-container">
       <h1 className="who-trusted-us-header">Zaufali nam</h1>
       <div className="trusted-logos">
-        <div className="trusted-logos-animate">
-          <img src={logo1} alt="logo-kghm" className="logo" />
-          <img src={logo2} alt="logo-kghm" className="logo" />
-          <img src={logo3} alt="logo-kghm" className="logo" />
-          <img src={logo4} alt="logo-kghm" className="logo" />
-          <img src={logo5} alt="logo-kghm" className="logo" />
-          <img src={logo6} alt="logo-kghm" className="logo" />
-          <img src={logo7} alt="logo-kghm" className="logo" />
-          <img src={logo8} alt="logo-kghm" className="logo" />
-          <img src={logo9} alt="logo-kghm" className="logo" />
-          <img src={logo10} alt="logo-kghm" className="logo" />
-          <img src={logo11} alt="logo-kghm" className="logo" />
+        <div className="trusted-logos-track">
+          {/* powielamy loga dwa razy, by animacja była płynna */}
+          {[...logos, ...logos].map((logo, index) => (
+            <img key={index} src={logo} alt="logo" className="logo" />
+          ))}
         </div>
       </div>
     </div>

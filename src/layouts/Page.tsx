@@ -5,6 +5,7 @@ import Fortranslators from "../pages/Fortranslators";
 import Faq from "../pages/Faq";
 import Contact from "../pages/Contact";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Policy from "../pages/Policy";
 
 const Page = () => {
   window.onscroll = () => {
@@ -31,8 +32,8 @@ const Page = () => {
           <Route path="/offer" element={<Offer />} />
           <Route path="/fortranslators" element={<Fortranslators />} />
           <Route path="/faq" element={<Faq />} />
-
           <Route path="/contact" element={<Contact />} />
+          <Route path="/policy" element={<Policy />} />
         </Routes>
       </div>
     </QueryClientProvider>

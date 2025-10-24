@@ -7,6 +7,7 @@ import { Controller, useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { baseUrl } from "../../baseUrl";
 import { Alert, Snackbar, type SnackbarCloseReason } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 export type FileState = {
   isFileLoaded: boolean;
@@ -258,7 +259,7 @@ const Form: React.FC = () => {
                       <span className="m-policy">
                         Klikając Prześlij formularz zgadzasz się na
                         przetwarzanie danych osobowych, zawartych w{" "}
-                        <a>Polityce prywatności</a>.
+                        <NavLink to="/policy">Polityce prywatności</NavLink>.
                       </span>
                     </div>
                     <div className="m-sender-container">

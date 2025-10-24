@@ -1,16 +1,16 @@
 @use "./colors";
 
 .who-trusted-us-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 250px;
   width: 100%;
-  background-color: colors.$white;
+  overflow: hidden;
+  background: white;
+  padding: 40px 0;
+  height: 250px;
+  text-align: center;
 
   .who-trusted-us-header {
     margin-top: 20px;
+    margin-bottom: 40px;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -21,96 +21,72 @@
   }
 
   .trusted-logos {
-    position: relative;
     width: 100%;
     overflow: hidden;
+    position: relative;
 
-    .trusted-logos-animate {
+    .trusted-logos-track {
       margin-top: 45px;
-      position: relative;
       display: flex;
-      justify-content: flex-start;
       align-items: center;
-      flex-wrap: nowrap;
-      overflow: hidden;
-      left: -240px;
-      width: 3300px;
-      animation: tape-logos-animation normal 40s ease-out infinite;
+      gap: 80px;
+      width: max-content;
+      animation: scroll-logos 25s linear infinite;
 
       .logo {
-        margin: 0 30px;
-        height: auto;
-        width: auto;
+        height: 60px;
+        object-fit: contain;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
 }
 
-@keyframes tape-logos-animation {
+// 🔁 Płynna karuzela bez zatrzymań
+@keyframes scroll-logos {
   0% {
-    left: 0;
+    transform: translateX(0);
   }
-
-  82% {
-    left: -1150px;
-  }
-
-  90% {
-    left: -1150px;
-  }
-
-  95% {
-    left: 0;
-  }
-
   100% {
-    left: 0;
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 1100px) {
-  @keyframes tape-logos-animation {
-    0% {
-      left: 0;
-    }
-
-    82% {
-      left: -1450px;
-    }
-
-    90% {
-      left: -1450px;
-    }
-
-    95% {
-      left: 0;
-    }
-
-    100% {
-      left: 0;
-    }
-  }
-}
+// 🔹 Responsywność
 @media (max-width: 992px) {
-  @keyframes tape-logos-animation {
-    0% {
-      left: 0;
+  .who-trusted-us-container {
+    padding: 20px 0;
+
+    .who-trusted-us-header {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
     }
 
-    82% {
-      left: -2650px;
-    }
+    .trusted-logos-track {
+      gap: 50px;
+      animation-duration: 30s;
 
-    90% {
-      left: -2650px;
+      .logo {
+        height: 45px;
+      }
     }
+  }
+}
 
-    95% {
-      left: 0;
-    }
+@media (max-width: 576px) {
+  .who-trusted-us-container {
+    .trusted-logos-track {
+      gap: 40px;
+      animation-duration: 35s;
 
-    100% {
-      left: 0;
+      .logo {
+        height: 35px;
+      }
     }
   }
 }

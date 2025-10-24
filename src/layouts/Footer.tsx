@@ -51,10 +51,22 @@ const Footer = () => {
               <div className="lower-footer-container">
                 <span>Copyright &copy; {currentYear} DAG-MAR</span>
                 <div className="icons-footer-container">
-                  <img src={fbIcon} alt="Facebook Icon" className="icon" />
-                  <img src={googleIcon} alt="Google Icon" className="icon" />
+                  <a
+                    href="https://www.facebook.com/dagmartlumaczenia"
+                    target="_blank"
+                  >
+                    <img src={fbIcon} alt="Facebook Icon" className="icon" />
+                  </a>
+                  <a
+                    href="https://www.google.com/search?q=Biuro+T%C5%82umacze%C5%84+Przysi%C4%99g%C5%82ych+DAG-MAR+S.C.&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s6TqQclGEexZdc5LVg68GWZ9ggSRwjTMIS6amwsi-q8-9IJsr-k1oGFofugNSa6WhIxNEw0%3D&uds=AOm0WdGX4_QpCLns5p-tTuq4Oz-CIqfGyE7KmPo2-p5dF8voR7axXW4e3FoKTF4M0timg1a8D9kZ7T5w8SpTqpYfWuOEvOh6d10fwyQJOI0Kn2xxYIZeFu_ZIZbHzWARN6HGIr78Z3BSePrfav6m2tojm4CxI6uanQ"
+                    target="_blank"
+                  >
+                    <img src={googleIcon} alt="Google Icon" className="icon" />
+                  </a>
                 </div>
-                <span>Polityka prywatności</span>
+                <NavLink to="/policy" className="policy-link">
+                  <span>Polityka prywatności</span>
+                </NavLink>
               </div>
             </footer>
           ) : (
@@ -102,11 +114,22 @@ const Footer = () => {
               </div>
               <div className="lower-footer-container">
                 <div className="icons-footer-container">
-                  <img src={fbIcon} alt="Facebook Icon" className="icon" />
-                  <img src={googleIcon} alt="Google Icon" className="icon" />
+                  <a
+                    href="https://www.facebook.com/dagmartlumaczenia"
+                    target="_blank"
+                  >
+                    <img src={fbIcon} alt="Facebook Icon" className="icon" />
+                  </a>
+                  <a
+                    href="https://www.google.com/search?q=Biuro+T%C5%82umacze%C5%84+Przysi%C4%99g%C5%82ych+DAG-MAR+S.C.&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s6TqQclGEexZdc5LVg68GWZ9ggSRwjTMIS6amwsi-q8-9IJsr-k1oGFofugNSa6WhIxNEw0%3D&uds=AOm0WdGX4_QpCLns5p-tTuq4Oz-CIqfGyE7KmPo2-p5dF8voR7axXW4e3FoKTF4M0timg1a8D9kZ7T5w8SpTqpYfWuOEvOh6d10fwyQJOI0Kn2xxYIZeFu_ZIZbHzWARN6HGIr78Z3BSePrfav6m2tojm4CxI6uanQ"
+                    target="_blank"
+                  >
+                    <img src={googleIcon} alt="Google Icon" className="icon" />
+                  </a>
                 </div>
-
-                <span>Polityka prywatności</span>
+                <NavLink to="/policy" className="policy-link">
+                  <span>Polityka prywatności</span>
+                </NavLink>
                 <span>Copyright &copy; {currentYear} DAG-MAR</span>
               </div>
             </footer>
