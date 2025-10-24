@@ -28,7 +28,7 @@ const Map = () => {
 
               <div className="location-and-address-container">
                 <div className="location">
-                  <h2>Gdzie i kiedy stacjonujemy?</h2>
+                  <h2>Gdzie i kiedy pracujemy?</h2>
                   <p>
                     Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
                     Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
@@ -74,11 +74,14 @@ const Map = () => {
 
               <div className="location-and-address-container">
                 <div className="location">
-                  <h2>Gdzie i kiedy stacjonujemy?</h2>
+                  <h2>Gdzie i kiedy pracujemy?</h2>
                   <p>
                     Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
                     Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
-                    Jesteśmy otwarci od poniedziałku do piątku w godzinach 9-16.
+                    Biuro czynne jest w poniedziałki, wtorki i czwartki w
+                    godzinach 8:00–14:30. W środy i piątki prosimy o kontakt
+                    telefoniczny. Można się z nami również kontaktować
+                    telefonicznie (pn-pt) do godziny 20:00.
                   </p>
                 </div>
                 <div className="address">
