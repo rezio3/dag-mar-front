@@ -3,10 +3,8 @@
 .map-and-address-container {
   display: flex;
   justify-content: space-evenly;
-  //   align-items: center;
   padding: 120px 0 100px;
   width: 100%;
-  //   height: 642px;
   background-color: colors.$red-btn;
   background-image: url(../img/contact-big-frames.png);
 
@@ -34,11 +32,9 @@
     flex-direction: column;
     justify-content: space-between;
     width: 468px;
-    // height: 378px;
     margin-right: 15%;
     margin-left: 20px;
     color: colors.$washed-white;
-    // height: fit-content;
 
     .location {
       h2 {
@@ -79,6 +75,61 @@
         line-height: 27px;
       }
     }
+    .lineCompany {
+      overflow: hidden;
+      border-bottom: 1px #cecece solid;
+      transition: 0.3s ease-out;
+
+      .visible-line {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .visible-span-text {
+          font-weight: 400;
+          font-size: 16px;
+          margin: 0;
+          margin-bottom: 5px;
+        }
+
+        .plus {
+          width: 20px;
+          cursor: pointer;
+          // color: white;
+          filter: brightness(0) invert(1);
+          opacity: 1;
+          padding: 15px;
+          transition: 0.3s ease-out;
+        }
+      }
+
+      .unvisible-line {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          margin: 0;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 27px;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .linePayments:last-child {
+      margin-bottom: 150px;
+      border-bottom: none;
+    }
+
+    .rotate {
+      rotate: -45deg;
+    }
   }
 }
 
@@ -99,7 +150,6 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 900px;
 
     .loading-box {
       display: flex;
@@ -150,6 +200,9 @@
           margin: 0;
           font-size: 16px;
         }
+      }
+      .lineCompany {
+        width: 100%;
       }
     }
   }
