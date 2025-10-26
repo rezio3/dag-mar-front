@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "../style/footer.scss";
-import footerLogo from "../img/footer-logo.svg";
+import footerLogo from "../img/dmFooterLogo.svg";
 import fbIcon from "../img/FacebookIcon.svg";
 import googleIcon from "../img/GoogleIcon.svg";
 import Media from "react-media";

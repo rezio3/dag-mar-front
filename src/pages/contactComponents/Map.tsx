@@ -33,9 +33,10 @@ const Map = () => {
                     Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
                     Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
                     Biuro czynne jest w poniedziałki, wtorki i czwartki w
-                    godzinach 8:00–14:30. W środy i piątki prosimy o kontakt
-                    telefoniczny. Można się z nami również kontaktować
-                    telefonicznie (pn-pt) do godziny 20:00.
+                    godzinach 8:00–14:30. W środy i piątki pracujemy w innej
+                    lokalizacji ze względu na obsługę sądu kancelarii prawnych i
+                    urzędów, prosimy o kontakt telefoniczny. Można się z nami
+                    również kontaktować telefonicznie (pn-pt) do godziny 20:00.
                   </p>
                 </div>
                 <div className="address">
@@ -79,9 +80,10 @@ const Map = () => {
                     Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
                     Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
                     Biuro czynne jest w poniedziałki, wtorki i czwartki w
-                    godzinach 8:00–14:30. W środy i piątki prosimy o kontakt
-                    telefoniczny. Można się z nami również kontaktować
-                    telefonicznie (pn-pt) do godziny 20:00.
+                    godzinach 8:00–14:30. W środy i piątki pracujemy w innej
+                    lokalizacji ze względu na obsługę sądu kancelarii prawnych i
+                    urzędów, prosimy o kontakt telefoniczny. Można się z nami
+                    również kontaktować telefonicznie (pn-pt) do godziny 20:00.
                   </p>
                 </div>
                 <div className="address">

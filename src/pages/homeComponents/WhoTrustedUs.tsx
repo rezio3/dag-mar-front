@@ -1,6 +1,6 @@
 import "../../style/whoTrustedUs.scss";
 import logo1 from "../../img/logo1.png";
-import logo2 from "../../img/logo2.png";
+import logo2 from "../../img/lxpantos.png";
 import logo3 from "../../img/logo3.png";
 import logo4 from "../../img/logo4.png";
 import logo5 from "../../img/logo5.png";
