@@ -13,7 +13,7 @@ const Fortranslators = () => {
               <TranslatorsFirstSection />
               <div className="second-section">
                 <h2>Czekamy na ciebie</h2>
-                <span>
+                <span className="translators-span-red-section">
                   Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej{" "}
                   <strong>języków obcych</strong>, swobodnie posługuje się
                   językiem polskim, ma przynajmniej kilkuletnie doświadczenie w{" "}
@@ -32,7 +32,7 @@ const Fortranslators = () => {
               <TranslatorsFirstSection />
               <div className="second-section">
                 <h2>Czekamy na ciebie</h2>
-                <span>
+                <span className="translators-span-red-section">
                   Jeśli zna Pani/Pan perfekcyjnie jeden lub więcej{" "}
                   <strong>języków obcych</strong>, swobodnie posługuje się
                   językiem polskim, ma przynajmniej kilkuletnie doświadczenie w{" "}
