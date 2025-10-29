@@ -1,0 +1,45 @@
+@use "../../style/colors";
+
+.admin-login {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: colors.$white;
+  margin-top: 300px;
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.edit-news-container {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  &-inner {
+    width: 100%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .edit-news-input {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .edit-news-container {
+    padding: 20px;
+    &-inner {
+      .edit-news-input {
+        width: 100%;
+      }
+    }
+  }
+}

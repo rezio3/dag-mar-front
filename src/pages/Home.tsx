@@ -1,4 +1,3 @@
-// import React, { useContext, useEffect } from "react";
 import "../style/home.scss";
 import Stats from "./homeComponents/Stats.js";
 import Values from "./homeComponents/Values.js";
@@ -6,12 +5,9 @@ import Dt from "./homeComponents/Dt.js";
 import Opinions from "./homeComponents/Opinions.js";
 import { useScrollTo } from "react-use-window-scroll";
 import WhoTrustedUs from "./homeComponents/WhoTrustedUs.js";
-// import { NewsContext } from "../context/NewsContext.js";
-// import NewsWindow from "../layouts/NewsWindow.js";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
-  // const [news, setNews] = useContext(NewsContext);
   const scrollTo = useScrollTo();
   const scrollDown = () => {
     scrollTo({
@@ -23,7 +19,6 @@ const Home = () => {
 
   return (
     <div className="page-container">
-      {/* {news.newsOn ? <NewsWindow /> : null} */}
       <div className="header-container">
         <div className="header-span-container">
           <h1>

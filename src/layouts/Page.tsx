@@ -6,6 +6,8 @@ import Faq from "../pages/Faq";
 import Contact from "../pages/Contact";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Policy from "../pages/Policy";
+import EditNewsLogin from "../pages/EditNews/EditNewsLogin";
+import NewsAdminEdit from "../pages/EditNews/NewsAdminEdit";
 
 const Page = () => {
   window.onscroll = () => {
@@ -34,6 +36,16 @@ const Page = () => {
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/policy" element={<Policy />} />
+          <Route
+            path="/admin"
+            element={
+              localStorage.getItem("token") ? (
+                <NewsAdminEdit />
+              ) : (
+                <EditNewsLogin onLogin={() => window.location.reload()} />
+              )
+            }
+          />
         </Routes>
       </div>
     </QueryClientProvider>
