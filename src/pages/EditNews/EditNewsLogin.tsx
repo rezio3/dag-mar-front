@@ -25,13 +25,14 @@ const EditNewsLogin = ({ onLogin }: { onLogin: () => void }) => {
       const data = await res.json();
 
       if (res.ok) {
-        localStorage.setItem("token", data.token);
+        sessionStorage.setItem("token", data.token);
         onLogin();
       } else {
         setError("Nieprawidłowy login lub hasło");
       }
     } catch {
       setError("Błąd połączenia z serwerem");
+      setLoading(false);
     } finally {
       setLoading(false);
     }

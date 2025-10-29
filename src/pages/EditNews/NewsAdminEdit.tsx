@@ -23,7 +23,7 @@ const NewsAdminEdit = () => {
   const [openSuccess, setOpenSuccess] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     if (!token) return;
 
     fetch(`${baseUrl}admin/news`, {
@@ -38,13 +38,14 @@ const NewsAdminEdit = () => {
 
   const handleLogout = () => {
     setLoading(true);
-    localStorage.removeItem("token"); // usuwa token
+    sessionStorage.removeItem("token"); // usuwa token
     window.location.reload(); // odświeża stronę, żeby komponent zniknął
   };
 
-  const onSubmit = async () => {
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     try {
       await fetch(`${baseUrl}admin/news`, {
         method: "PUT",
@@ -72,7 +73,6 @@ const NewsAdminEdit = () => {
     setOpenSuccess(false);
   };
   if (!news) return <LoadingOverlay />;
-  console.log(news.newsOn);
 
   return (
     <div className="edit-news-container">
