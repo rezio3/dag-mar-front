@@ -25,7 +25,7 @@ const EditNewsLogin = ({ onLogin }: { onLogin: () => void }) => {
       const data = await res.json();
 
       if (res.ok) {
-        sessionStorage.setItem("token", data.token);
+        localStorage.setItem("token", data.token);
         onLogin();
       } else {
         setError("Nieprawidłowy login lub hasło");
