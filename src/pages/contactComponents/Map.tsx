@@ -147,15 +147,15 @@ export default Map;
 
 const companiesData = [
   {
-    companyName: `Biuro Tłumaczeń Przysięgłych „DAG-MAR” <br />Dagmara Toporowska`,
+    companyName: `Biuro Tłumaczeń Przysięgłych <br />DAG-MAR Dagmara Toporowska`,
     companyData: `ul. Karkonoska 1C, 59-300 Lubin <br />
-          tel. +48 76 846 10 64, kom. +48 607 618 567 <br />
+          tel. +48 76 846 10 64 <b>|</b> +48 607 618 567 <br />
           NIP: 692-172-62-49, Regon: 390770661`,
   },
   {
     companyName: `Biuro Tłumaczeń Przysięgłych <br />DAG-MAR S.C.`,
     companyData: `ul. Karkonoska 1C, 59-300 Lubin <br />
-          tel. +48 76 846 10 64, kom. +48 607 618 567 <br />
-          NIP: 692-250-69-52,, Regon: 022478167`,
+          tel. +48 76 846 10 64 <b>|</b> +48 607 618 567 <br />
+          NIP: 692-250-69-52, Regon: 022478167`,
   },
 ];

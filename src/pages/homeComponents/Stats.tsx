@@ -64,13 +64,13 @@ const Stats = () => {
               </div>
               <div className="third-stat stats">
                 <span className="stat-number dflex">
-                  {scrolled ? <Number n={20000} /> : 0}+
+                  {scrolled ? <Number n={20} /> : 0}&nbsp;tys.
                 </span>
                 <span className="stat-description">zadowolonych klientów</span>
               </div>
               <div className="forth-stat stats ">
                 <span className="stat-number dflex">
-                  {scrolled ? <Number n={72000} /> : 0}+
+                  {scrolled ? <Number n={72} /> : 0}&nbsp;tys.
                 </span>
                 <span className="stat-description">
                   przetłumaczonych dokumentów
@@ -101,7 +101,7 @@ const Stats = () => {
               <div className="second-block-stats block">
                 <div className="third-stat stats">
                   <span className="stat-number dflex">
-                    {scrolled ? <Number n={20000} /> : 0}+
+                    {scrolled ? <Number n={20} /> : 0}&nbsp;tys.
                   </span>
                   <span className="stat-description">
                     zadowolonych klientów
@@ -109,7 +109,7 @@ const Stats = () => {
                 </div>
                 <div className="forth-stat stats">
                   <span className="stat-number dflex">
-                    {scrolled ? <Number n={72000} /> : 0}+
+                    {scrolled ? <Number n={72} /> : 0}&nbsp;tys.
                   </span>
                   <span className="stat-description">
                     przetłumaczonych dokumentów
