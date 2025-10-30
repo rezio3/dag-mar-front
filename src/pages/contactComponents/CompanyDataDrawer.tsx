@@ -20,7 +20,7 @@ const CompanyDataDrawer: React.FC<CompanyDataDrawerProps> = ({
   return (
     <div
       className={`line${positionNum} lineCompany`}
-      style={companyView[lineKey] ? { height: "180px" } : { height: "80px" }}
+      style={companyView[lineKey] ? { height: "170px" } : { height: "80px" }}
     >
       <div className="visible-line">
         <h3
