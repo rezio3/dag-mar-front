@@ -55,6 +55,8 @@ const Payments = () => {
                     Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br /> mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING)
                     LODZ
+                    <br />
+                    Nr konta: <b>33 1140 2017 0000 4402 1131 7627</b>
                   </p>
                   <p>
                     Skrytka pocztowa 2108
@@ -64,7 +66,7 @@ const Payments = () => {
               </div>
               <div
                 className={"line2 linePayments"}
-                style={line2Active ? { height: "340px" } : { height: "80px" }}
+                style={line2Active ? { height: "380px" } : { height: "80px" }}
               >
                 <div className="visible-line">
                   <span className="visible-span-text">
@@ -83,13 +85,13 @@ const Payments = () => {
                 </div>
                 <div className="unvisible-line">
                   <p>
-                    Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.
+                    Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br />
-                    ul. Karkonoska 1C, 59-300 Lubin
+                    mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ
                     <br />
-                    mBank – Bankowość Detaliczna
+                    Skrytka pocztowa 2108
                     <br />
-                    49 1140 2004 0000 3602 8195 3937
+                    90-959 Łódź 2
                   </p>
                   <div>
                     <p>
@@ -97,13 +99,14 @@ const Payments = () => {
                         Dane niezbędne przy dokonywaniu płatności z zagranicy:
                       </span>
                       <br />
-                      <span>Nr konta: </span>PL49 1140 2004 0000 3602 8195 3937
+                      <span>Nr konta: </span>49 1140 2004 0000 3602 8195 3937
                       <br />
                       <span>
                         Nazwa firmy w przypadku przelewu na rachunek firmowy:
                       </span>
                       <br />
-                      Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.
+                      Biuro Tłumaczeń Przysięgłych DAG-MAR S.C. lub Biuro
+                      Tłumaczeń Przysięgłych „DAG-MAR” Dagmara Toporowska
                       <br />
                       <span>Adres odbiorcy przelewu: </span>ul. Karkonoska 1C,
                       59-300 Lubin
@@ -115,8 +118,6 @@ const Payments = () => {
                       <span>Nazwa i adres banku odbiorcy przelewu: </span>mBank
                       S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ, Skrytka
                       pocztowa 2108, 90-959 Łódź 2
-                      <br />
-                      <span>SORT CODE/numer rozliczeniowy: </span>11402004
                     </p>
                   </div>
                 </div>
@@ -128,7 +129,7 @@ const Payments = () => {
               <h2>Płatności</h2>
               <div
                 className={"line1 linePayments"}
-                style={line1Active ? { height: "240px" } : { height: "80px" }}
+                style={line1Active ? { height: "300px" } : { height: "80px" }}
               >
                 <div className="visible-line">
                   <span className="visible-span-text">
@@ -150,6 +151,8 @@ const Payments = () => {
                     Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br /> mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING)
                     LODZ
+                    <br />
+                    Nr konta: <b>33 1140 2017 0000 4402 1131 7627</b>
                   </p>
                   <p>
                     Skrytka pocztowa 2108
@@ -159,7 +162,7 @@ const Payments = () => {
               </div>
               <div
                 className={"line2 linePayments"}
-                style={line2Active ? { height: "760px" } : { height: "80px" }}
+                style={line2Active ? { height: "680px" } : { height: "80px" }}
               >
                 <div className="visible-line">
                   <span className="visible-span-text">
@@ -178,13 +181,13 @@ const Payments = () => {
                 </div>
                 <div className="unvisible-line">
                   <p>
-                    Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.
+                    Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br />
-                    ul. Karkonoska 1C, 59-300 Lubin
+                    mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ
                     <br />
-                    mBank – Bankowość Detaliczna
+                    Skrytka pocztowa 2108
                     <br />
-                    49 1140 2004 0000 3602 8195 3937
+                    90-959 Łódź 2
                   </p>
                   <div>
                     <p>
@@ -192,13 +195,14 @@ const Payments = () => {
                         Dane niezbędne przy dokonywaniu płatności z zagranicy:
                       </span>
                       <br />
-                      <span>Nr konta: </span>PL49 1140 2004 0000 3602 8195 3937
+                      <span>Nr konta: </span>49 1140 2004 0000 3602 8195 3937
                       <br />
                       <span>
                         Nazwa firmy w przypadku przelewu na rachunek firmowy:
                       </span>
                       <br />
-                      Biuro Tłumaczeń Przysięgłych DAG-MAR S.C.
+                      Biuro Tłumaczeń Przysięgłych DAG-MAR S.C. lub Biuro
+                      Tłumaczeń Przysięgłych „DAG-MAR” Dagmara Toporowska
                       <br />
                       <span>Adres odbiorcy przelewu: </span>ul. Karkonoska 1C,
                       59-300 Lubin
@@ -210,8 +214,6 @@ const Payments = () => {
                       <span>Nazwa i adres banku odbiorcy przelewu: </span>mBank
                       S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ, Skrytka
                       pocztowa 2108, 90-959 Łódź 2
-                      <br />
-                      <span>SORT CODE/numer rozliczeniowy: </span>11402004
                     </p>
                   </div>
                 </div>
