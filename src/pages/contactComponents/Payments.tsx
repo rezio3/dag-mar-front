@@ -130,9 +130,7 @@ const Payments = () => {
                 style={line3Active ? { height: "340px" } : { height: "80px" }}
               >
                 <div className="visible-line">
-                  <span className="visible-span-text">
-                    Instrukcja płatności
-                  </span>
+                  <span className="visible-span-text">Instrukcja przelewu</span>
                   <img
                     src={plus}
                     className={
