@@ -39,7 +39,7 @@ const Stats = () => {
     // };
   }, []);
   const date = new Date();
-  const yearsOfExperience = date.getFullYear() - 2002;
+  const yearsOfExperience = date.getFullYear() - 2000;
 
   return (
     <>
@@ -50,10 +50,10 @@ const Stats = () => {
             <section ref={myRef} className="stats-container" id="section1">
               <div className="first-stat stats">
                 <span className="stat-number">
-                  {scrolled ? <Number n={26} /> : 0}
+                  {scrolled ? <Number n={32} /> : 0}
                 </span>
                 <span className="stat-description">
-                  <strong>tłumaczonych języków</strong>
+                  <strong>tłumaczone języki</strong>
                 </span>
               </div>
               <div className="second-stat stats">
@@ -63,17 +63,17 @@ const Stats = () => {
                 <span className="stat-description">lat doświadczenia</span>
               </div>
               <div className="third-stat stats">
-                <span className="stat-number thousand">
-                  {scrolled ? <Number n={1000} /> : 0}+
+                <span className="stat-number dflex">
+                  {scrolled ? <Number n={20000} /> : 0}+
                 </span>
                 <span className="stat-description">zadowolonych klientów</span>
               </div>
-              <div className="forth-stat stats">
-                <span className="stat-number">
-                  {scrolled ? <Number n={16} /> : 0}
+              <div className="forth-stat stats ">
+                <span className="stat-number dflex">
+                  {scrolled ? <Number n={72000} /> : 0}+
                 </span>
                 <span className="stat-description">
-                  współpracujących partnerów
+                  przetłumaczonych dokumentów
                 </span>
               </div>
             </section>
@@ -84,10 +84,10 @@ const Stats = () => {
                 <div className="first-stat stats">
                   <span className="stat-number">
                     {" "}
-                    {scrolled ? <Number n={26} /> : 0}
+                    {scrolled ? <Number n={32} /> : 0}
                   </span>
                   <span className="stat-description">
-                    <strong>tłumaczonych języków</strong>
+                    <strong>tłumaczone języki</strong>
                   </span>
                 </div>
                 <div className="second-stat stats">
@@ -100,19 +100,19 @@ const Stats = () => {
               </div>
               <div className="second-block-stats block">
                 <div className="third-stat stats">
-                  <span className="stat-number thousand">
-                    {scrolled ? <Number n={1000} /> : 0}+
+                  <span className="stat-number dflex">
+                    {scrolled ? <Number n={20000} /> : 0}+
                   </span>
                   <span className="stat-description">
                     zadowolonych klientów
                   </span>
                 </div>
                 <div className="forth-stat stats">
-                  <span className="stat-number">
-                    {scrolled ? <Number n={16} /> : 0}
+                  <span className="stat-number dflex">
+                    {scrolled ? <Number n={72000} /> : 0}+
                   </span>
                   <span className="stat-description">
-                    współpracujących partnerów
+                    przetłumaczonych dokumentów
                   </span>
                 </div>
               </div>
