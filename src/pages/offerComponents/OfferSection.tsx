@@ -9,7 +9,7 @@ import Media from "react-media";
 const OfferSection = () => {
   const [offer, setOffer] = useState(0);
   const [offerMobile, setOfferMobile] = useState({
-    offer0: true,
+    offer0: false,
     offer1: false,
     offer2: false,
     offer3: false,
