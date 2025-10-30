@@ -48,14 +48,31 @@ const Map = () => {
                 <div className="location">
                   <h2>Gdzie i kiedy pracujemy?</h2>
                   <p>
-                    Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
-                    Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
-                    Biuro czynne jest w poniedziałki, wtorki i czwartki w
-                    godzinach 8:00–14:30. W środy i piątki pracujemy w innej
-                    lokalizacji ze względu na obsługę sądu kancelarii prawnych i
-                    urzędów, prosimy o kontakt telefoniczny. Można się z nami
-                    również kontaktować telefonicznie (pn-pt) do godziny 20:00.
+                    Nasze biuro znajduje się w Lubinie na ulicy Karkonoskiej 1C,
+                    na pierwszym piętrze budynku usługowego (100m od Galerii
+                    Cuprum Arena).
                   </p>
+                  <span>
+                    <b>Biuro czynne jest w godzinach:</b>
+                    <br />
+                    Poniedziałki: 8:00 - 14:30
+                    <br />
+                    Wtorki: 8:00 - 14:30
+                    <br />
+                    Środy: 8:00 - 18:00 (w innej lokalizacji)*
+                    <br />
+                    Czwartki: 8:00 - 14:30
+                    <br />
+                    Piątki: 8:00 - 18:00 (w innej lokalizacji)*
+                  </span>
+                  <span className="gray-span">
+                    * ze względu na obsługę sądu, kancelarii prawnych i urzędów
+                    prosimy o wcześniejszy kontakt telefoniczny.
+                  </span>
+                  <span>
+                    Od poniedziałku do piątku można się z nami kontaktować do
+                    godziny 20:00 pod numerami 607 618 567 oraz 76 846 10 64.
+                  </span>
                 </div>
                 <h2>Dane kontaktowe</h2>
                 {companiesData.map((company, index) => (
@@ -81,14 +98,31 @@ const Map = () => {
                 <div className="location">
                   <h2>Gdzie i kiedy pracujemy?</h2>
                   <p>
-                    Nasze biuro znajduje się <strong>w Lubinie</strong> na ulicy
-                    Karkonoskiej 1C, na pierwszym piętrze budynku usługowego.
-                    Biuro czynne jest w poniedziałki, wtorki i czwartki w
-                    godzinach 8:00–14:30. W środy i piątki pracujemy w innej
-                    lokalizacji ze względu na obsługę sądu kancelarii prawnych i
-                    urzędów, prosimy o kontakt telefoniczny. Można się z nami
-                    również kontaktować telefonicznie (pn-pt) do godziny 20:00.
+                    Nasze biuro znajduje się w Lubinie na ulicy Karkonoskiej 1C,
+                    na pierwszym piętrze budynku usługowego (100m od Galerii
+                    Cuprum Arena).
                   </p>
+                  <span>
+                    <b>Biuro czynne jest w godzinach:</b>
+                    <br />
+                    Poniedziałki: 8:00 - 14:30
+                    <br />
+                    Wtorki: 8:00 - 14:30
+                    <br />
+                    Środy: 8:00 - 18:00 (w innej lokalizacji)*
+                    <br />
+                    Czwartki: 8:00 - 14:30
+                    <br />
+                    Piątki: 8:00 - 18:00 (w innej lokalizacji)*
+                  </span>
+                  <span className="gray-span">
+                    * ze względu na obsługę sądu, kancelarii prawnych i urzędów
+                    prosimy o wcześniejszy kontakt telefoniczny.
+                  </span>
+                  <span>
+                    Od poniedziałku do piątku można się z nami kontaktować do
+                    godziny 20:00 pod numerami 607 618 567 oraz 76 846 10 64.
+                  </span>
                 </div>
                 <h2>Dane kontaktowe</h2>
                 {companiesData.map((company, index) => (

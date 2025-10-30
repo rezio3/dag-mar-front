@@ -21,7 +21,7 @@
 
   .map {
     width: 671px;
-    height: 378px;
+    height: 478px;
     background-color: #ddd;
     margin-left: 10%;
     border-radius: 10px;
@@ -37,6 +37,9 @@
     color: colors.$washed-white;
 
     .location {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
       h2 {
         margin-top: 0;
         text-transform: uppercase;
@@ -51,8 +54,18 @@
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 16px;
-        line-height: 27px;
+        line-height: 25px;
       }
+      span {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+      }
+      // .gray-span {
+      //   color: colors.$txt;
+      // }
     }
     .address {
       margin-bottom: 20px;
