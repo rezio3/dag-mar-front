@@ -3,7 +3,7 @@ import Media from "react-media";
 import "../../style/payments.scss";
 import plus from "../../img/plus.svg";
 
-type PaymentsKeys = "line1Active" | "line2Active";
+type PaymentsKeys = "line1Active" | "line2Active" | "line3Active";
 
 const Payments = () => {
   const [paymentsView, setPaymentsView] = useState<
@@ -11,6 +11,7 @@ const Payments = () => {
   >({
     line1Active: false,
     line2Active: false,
+    line3Active: false,
   });
 
   const handlePlusClick = (e: React.MouseEvent<HTMLImageElement>) => {
@@ -22,7 +23,7 @@ const Payments = () => {
     });
   };
 
-  const { line1Active, line2Active } = paymentsView;
+  const { line1Active, line2Active, line3Active } = paymentsView;
 
   return (
     <>
@@ -52,11 +53,11 @@ const Payments = () => {
                 </div>
                 <div className="unvisible-line">
                   <p>
+                    Nr konta: <b>33 1140 2017 0000 4402 1131 7627</b>
+                    <br />
                     Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br /> mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING)
                     LODZ
-                    <br />
-                    Nr konta: <b>33 1140 2017 0000 4402 1131 7627</b>
                   </p>
                   <p>
                     Skrytka pocztowa 2108
@@ -85,6 +86,8 @@ const Payments = () => {
                 </div>
                 <div className="unvisible-line">
                   <p>
+                    Nr konta: <b>49 1140 2004 0000 3602 8195 3937</b>
+                    <br />
                     Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br />
                     mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ
@@ -99,7 +102,7 @@ const Payments = () => {
                         Dane niezbędne przy dokonywaniu płatności z zagranicy:
                       </span>
                       <br />
-                      <span>Nr konta: </span>49 1140 2004 0000 3602 8195 3937
+                      <span>Nr konta: 49 1140 2004 0000 3602 8195 3937</span>
                       <br />
                       <span>
                         Nazwa firmy w przypadku przelewu na rachunek firmowy:
@@ -149,11 +152,11 @@ const Payments = () => {
                 </div>
                 <div className="unvisible-line">
                   <p>
+                    Nr konta: <b>33 1140 2017 0000 4402 1131 7627</b>
+                    <br />
                     Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br /> mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING)
                     LODZ
-                    <br />
-                    Nr konta: <b>33 1140 2017 0000 4402 1131 7627</b>
                   </p>
                   <p>
                     Skrytka pocztowa 2108
@@ -163,7 +166,7 @@ const Payments = () => {
               </div>
               <div
                 className={"line2 linePayments"}
-                style={line2Active ? { height: "680px" } : { height: "80px" }}
+                style={line2Active ? { height: "280px" } : { height: "80px" }}
               >
                 <div className="visible-line">
                   <span className="visible-span-text">
@@ -183,6 +186,8 @@ const Payments = () => {
                 </div>
                 <div className="unvisible-line">
                   <p>
+                    Nr konta: <b>49 1140 2004 0000 3602 8195 3937</b>
+                    <br />
                     Kod BIC/SWIFT mBanku: BREXPLPWMBK
                     <br />
                     mBank S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ
@@ -191,33 +196,50 @@ const Payments = () => {
                     <br />
                     90-959 Łódź 2
                   </p>
-                  <div>
-                    <p>
-                      <span>
-                        Dane niezbędne przy dokonywaniu płatności z zagranicy:
-                      </span>
-                      <br />
-                      <span>Nr konta: </span>49 1140 2004 0000 3602 8195 3937
-                      <br />
-                      <span>
-                        Nazwa firmy w przypadku przelewu na rachunek firmowy:
-                      </span>
-                      <br />
-                      Biuro Tłumaczeń Przysięgłych DAG-MAR S.C. lub Biuro
-                      Tłumaczeń Przysięgłych „DAG-MAR” Dagmara Toporowska
-                      <br />
-                      <span>Adres odbiorcy przelewu: </span>ul. Karkonoska 1C,
-                      59-300 Lubin
-                      <br />
-                      <span>Tytuł przelewu: </span>Faktura nr…
-                      <br />
-                      <span>Kod BIC/SWIFT mBanku: </span>BREXPLPWMBK
-                      <br />
-                      <span>Nazwa i adres banku odbiorcy przelewu: </span>mBank
-                      S.A. FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ, Skrytka
-                      pocztowa 2108, 90-959 Łódź 2
-                    </p>
-                  </div>
+                </div>
+              </div>
+              <div
+                className={"line3 linePayments"}
+                style={line3Active ? { height: "480px" } : { height: "80px" }}
+              >
+                <div className="visible-line">
+                  <span className="visible-span-text">Instrukcja przelewu</span>
+                  <img
+                    src={plus}
+                    className={
+                      line3Active
+                        ? "material-symbols-outlined plus rotate"
+                        : "material-symbols-outlined plus"
+                    }
+                    id="line3Active"
+                    onClick={handlePlusClick}
+                  />
+                </div>
+                <div className="unvisible-line">
+                  <p>
+                    <b>
+                      Dane niezbędne przy dokonywaniu płatności z zagranicy:
+                    </b>
+                    <br />
+                    Nr konta jak powyżej (w zależności z której działalności
+                    wystawiona została faktura)
+                    <br />
+                    <b>Nazwa firmy w przypadku przelewu na rachunek:</b>
+                    <br />
+                    Biuro Tłumaczeń Przysięgłych DAG-MAR S.C. lub Biuro
+                    Tłumaczeń Przysięgłych „DAG-MAR” Dagmara Toporowska
+                    <br />
+                    <b>Adres odbiorcy przelewu: </b>ul. Karkonoska 1C, 59-300
+                    Lubin Skrytka pocztowa 2108
+                    <br />
+                    <b>Tytuł przelewu: </b>Faktura nr…
+                    <br />
+                    <b>Kod BIC/SWIFT mBanku: </b>BREXPLPWMBK
+                    <br />
+                    <b>Nazwa i adres banku odbiorcy przelewu: </b>mBank S.A.
+                    FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ, Skrytka
+                    pocztowa 2108, 90-959 Łódź 2
+                  </p>
                 </div>
               </div>
             </div>
