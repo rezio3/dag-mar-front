@@ -200,7 +200,7 @@ const Payments = () => {
               </div>
               <div
                 className={"line3 linePayments"}
-                style={line3Active ? { height: "480px" } : { height: "80px" }}
+                style={line3Active ? { height: "560px" } : { height: "80px" }}
               >
                 <div className="visible-line">
                   <span className="visible-span-text">Instrukcja przelewu</span>
