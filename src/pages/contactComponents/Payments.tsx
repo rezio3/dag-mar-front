@@ -125,6 +125,52 @@ const Payments = () => {
                   </div>
                 </div>
               </div>
+              <div
+                className={"line3 linePayments"}
+                style={line3Active ? { height: "340px" } : { height: "80px" }}
+              >
+                <div className="visible-line">
+                  <span className="visible-span-text">
+                    Instrukcja płatności
+                  </span>
+                  <img
+                    src={plus}
+                    className={
+                      line3Active
+                        ? "material-symbols-outlined plus rotate"
+                        : "material-symbols-outlined plus"
+                    }
+                    id="line3Active"
+                    onClick={handlePlusClick}
+                  />
+                </div>
+                <div className="unvisible-line">
+                  <p>
+                    <b>
+                      Dane niezbędne przy dokonywaniu płatności z zagranicy:
+                    </b>
+                    <br />
+                    Nr konta jak powyżej (w zależności z której działalności
+                    wystawiona została faktura)
+                    <br />
+                    <b>Nazwa firmy w przypadku przelewu na rachunek:</b>
+                    <br />
+                    Biuro Tłumaczeń Przysięgłych DAG-MAR S.C. lub Biuro
+                    Tłumaczeń Przysięgłych DAG-MAR Dagmara Toporowska
+                    <br />
+                    <b>Adres odbiorcy przelewu: </b>ul. Karkonoska 1C, 59-300
+                    Lubin Skrytka pocztowa 2108
+                    <br />
+                    <b>Tytuł przelewu: </b>Faktura nr…
+                    <br />
+                    <b>Kod BIC/SWIFT mBanku: </b>BREXPLPWMBK
+                    <br />
+                    <b>Nazwa i adres banku odbiorcy przelewu: </b>mBank S.A.
+                    FORMERLY BRE BANK S.A. (RETAIL BANKING) LODZ, Skrytka
+                    pocztowa 2108, 90-959 Łódź 2
+                  </p>
+                </div>
+              </div>
             </div>
           ) : (
             // Mobile
