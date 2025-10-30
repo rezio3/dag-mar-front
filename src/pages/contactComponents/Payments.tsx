@@ -227,7 +227,7 @@ const Payments = () => {
                     <b>Nazwa firmy w przypadku przelewu na rachunek:</b>
                     <br />
                     Biuro Tłumaczeń Przysięgłych DAG-MAR S.C. lub Biuro
-                    Tłumaczeń Przysięgłych „DAG-MAR” Dagmara Toporowska
+                    Tłumaczeń Przysięgłych DAG-MAR Dagmara Toporowska
                     <br />
                     <b>Adres odbiorcy przelewu: </b>ul. Karkonoska 1C, 59-300
                     Lubin Skrytka pocztowa 2108
