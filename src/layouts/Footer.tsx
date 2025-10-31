@@ -31,7 +31,7 @@ const Footer = () => {
                   <NavLink to="/offer" className="nav-btn-desktop">
                     <span className="footer-link">Oferta</span>
                   </NavLink>
-                  <NavLink to="/contact" className="nav-btn-desktop">
+                  <NavLink to="/contact?section=payments" className="nav-btn-desktop">
                     <span className="footer-link">Płatności</span>
                   </NavLink>
                 </div>
@@ -105,7 +105,7 @@ const Footer = () => {
                     </NavLink>
                   </div>
                   <div className="aboutUs-offer-FAQ-translators-footer aboutUs-right">
-                    <NavLink to="/contact" className="nav-btn-desktop">
+                    <NavLink to="/contact?section=payments" className="nav-btn-desktop">
                       <span className="footer-link">Płatności</span>
                     </NavLink>
 
