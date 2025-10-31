@@ -33,7 +33,10 @@ const NewsAdminEdit = () => {
     })
       .then((res) => res.json())
       .then((data) => setNews(data))
-      .catch(console.error);
+      .catch(() => {
+        setLoading(false);
+        console.error;
+      });
   }, []);
 
   const handleLogout = () => {
@@ -72,63 +75,83 @@ const NewsAdminEdit = () => {
     }
     setOpenSuccess(false);
   };
-  if (!news) return <LoadingOverlay />;
 
   return (
-    <div className="edit-news-container">
+    <>
       {loading && <LoadingOverlay />}
-      <form className="edit-news-container-inner" onSubmit={onSubmit}>
-        <h2>Edit notification</h2>
-        <TextField
-          className="edit-news-input"
-          id="outlined-basic"
-          label="1 Line"
-          variant="outlined"
-          onChange={(e) => setNews({ ...news, txt1: e.target.value })}
-          value={news.txt1}
-        />
-        <TextField
-          className="edit-news-input"
-          id="outlined-basic"
-          label="2 Line"
-          variant="outlined"
-          onChange={(e) => setNews({ ...news, txt2: e.target.value })}
-          value={news.txt2}
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              onChange={(e) => setNews({ ...news, newsOn: e.target.checked })}
-              defaultChecked={news.newsOn}
+      {news ? (
+        <div className="edit-news-container">
+          <form className="edit-news-container-inner" onSubmit={onSubmit}>
+            <h2>Edit notification</h2>
+            <TextField
+              className="edit-news-input"
+              id="outlined-basic"
+              label="1 Line"
+              variant="outlined"
+              onChange={(e) => setNews({ ...news, txt1: e.target.value })}
+              value={news.txt1}
             />
-          }
-          label="Show notification"
-        />
+            <TextField
+              className="edit-news-input"
+              id="outlined-basic"
+              label="2 Line"
+              variant="outlined"
+              onChange={(e) => setNews({ ...news, txt2: e.target.value })}
+              value={news.txt2}
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={(e) =>
+                    setNews({ ...news, newsOn: e.target.checked })
+                  }
+                  defaultChecked={news.newsOn}
+                />
+              }
+              label="Show notification"
+            />
 
-        <Button variant="contained" type="submit">
-          Save
-        </Button>
-      </form>
-      <Button variant="outlined" type="submit" onClick={handleLogout}>
-        Logout
-      </Button>
-      <Snackbar
-        open={openSuccess}
-        autoHideDuration={2000}
-        onClose={handleClose}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        style={{ marginTop: "80px" }}
-      >
-        <Alert
-          onClose={handleClose}
-          severity="success"
-          variant="filled"
-          sx={{ width: "100%" }}
+            <Button variant="contained" type="submit">
+              Save
+            </Button>
+          </form>
+          <Button variant="outlined" type="submit" onClick={handleLogout}>
+            Logout
+          </Button>
+          <Snackbar
+            open={openSuccess}
+            autoHideDuration={2000}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+            style={{ marginTop: "80px" }}
+          >
+            <Alert
+              onClose={handleClose}
+              severity="success"
+              variant="filled"
+              sx={{ width: "100%" }}
+            >
+              Zmieniono powiadomienie
+            </Alert>
+          </Snackbar>
+        </div>
+      ) : (
+        <div
+          style={{
+            marginTop: 300,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
         >
-          Zmieniono powiadomienie
-        </Alert>
-      </Snackbar>
-    </div>
+          <h3>Coś poszło nie tak...</h3>
+          <Button variant="outlined" type="submit" onClick={handleLogout}>
+            Logout
+          </Button>
+        </div>
+      )}
+    </>
   );
 };
 

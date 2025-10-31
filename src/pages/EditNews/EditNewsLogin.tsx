@@ -28,6 +28,7 @@ const EditNewsLogin = ({ onLogin }: { onLogin: () => void }) => {
         localStorage.setItem("token", data.token);
         onLogin();
       } else {
+        setLoading(false);
         setError("Nieprawidłowy login lub hasło");
       }
     } catch {
