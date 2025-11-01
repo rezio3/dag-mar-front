@@ -12,12 +12,13 @@ const Contact = () => {
     useLayoutEffect(() => {
     const params = new URLSearchParams(location.search);
     const section = params.get("section");
-    console.log("section")
-    console.log(section)
 
     if (section === "payments" && paymentsRef.current) {
-      console.log(paymentsRef.current)
-      paymentsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+       requestAnimationFrame(() => {
+      setTimeout(() => {
+        paymentsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 300);
+    });
     }
   }, [location]);
   return (
