@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import {  useLayoutEffect, useRef } from "react";
 import "../style/contact.scss";
 import Form from "./contactComponents/Form";
 import Map from "./contactComponents/Map";
@@ -9,7 +9,7 @@ const Contact = () => {
    const paymentsRef = useRef<HTMLDivElement | null>(null);
    const location = useLocation();
 
-   useEffect(() => {
+    useLayoutEffect(() => {
     const params = new URLSearchParams(location.search);
     const section = params.get("section");
 
