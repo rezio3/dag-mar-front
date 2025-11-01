@@ -12,8 +12,11 @@ const Contact = () => {
     useLayoutEffect(() => {
     const params = new URLSearchParams(location.search);
     const section = params.get("section");
+    console.log("section")
+    console.log(section)
 
     if (section === "payments" && paymentsRef.current) {
+      console.log(paymentsRef.current)
       paymentsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [location]);
