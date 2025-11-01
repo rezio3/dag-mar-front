@@ -16,7 +16,7 @@ const Contact = () => {
     if (section === "payments" && paymentsRef.current) {
        requestAnimationFrame(() => {
       setTimeout(() => {
-        paymentsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        paymentsRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
       }, 300);
     });
     }
