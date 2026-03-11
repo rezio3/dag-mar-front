@@ -216,54 +216,18 @@ const Opinions = () => {
                   </div>
                 </div>
                 <div className="segments-container">
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 1 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 2 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 3 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 4 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 5 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 6 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 7 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 8 ? "#6c6c6c" : null,
-                    }}
-                  />
+                  {opinionsData.map((e, index) => {
+                    return (
+                      <OpinionSegments
+                        style={{
+                          backgroundColor:
+                            opinion.currentView === index + 1
+                              ? "#6c6c6c"
+                              : null,
+                        }}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -339,54 +303,18 @@ const Opinions = () => {
                   </div>
                 </div>
                 <div className="segments-container">
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 1 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 2 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 3 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 4 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 5 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 6 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 7 ? "#6c6c6c" : null,
-                    }}
-                  />
-                  <OpinionSegments
-                    style={{
-                      backgroundColor:
-                        opinion.currentView === 8 ? "#6c6c6c" : null,
-                    }}
-                  />
+                  {opinionsData.map((e, index) => {
+                    return (
+                      <OpinionSegments
+                        style={{
+                          backgroundColor:
+                            opinion.currentView === index + 1
+                              ? "#6c6c6c"
+                              : null,
+                        }}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>

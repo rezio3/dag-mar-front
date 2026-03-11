@@ -4,6 +4,7 @@ import footerLogo from "../img/dmFooterLogo.svg";
 import fbIcon from "../img/FacebookIcon.svg";
 import googleIcon from "../img/GoogleIcon.svg";
 import Media from "react-media";
+import { url } from "../url";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,21 +26,24 @@ const Footer = () => {
                   <span className="footer-contact-number">+48 607 618 567</span>
                 </div>
                 <div className="aboutUs-offer-FAQ-translators-footer aboutUs-footer">
-                  <NavLink to="/" end className="nav-btn-desktop">
+                  <NavLink to={url.home} end className="nav-btn-desktop">
                     <span className="footer-link">O nas</span>
                   </NavLink>
-                  <NavLink to="/offer" className="nav-btn-desktop">
+                  <NavLink to={url.offer} className="nav-btn-desktop">
                     <span className="footer-link">Oferta</span>
                   </NavLink>
-                  <NavLink to="/contact?section=payments" className="nav-btn-desktop">
+                  <NavLink
+                    to="/tlumaczenia/kontakt#platnosci"
+                    className="nav-btn-desktop"
+                  >
                     <span className="footer-link">Płatności</span>
                   </NavLink>
                 </div>
                 <div className="aboutUs-offer-FAQ-translators-footer">
-                  <NavLink to="/fortranslators" className="nav-btn-desktop">
+                  <NavLink to={url.forTranslators} className="nav-btn-desktop">
                     <span className="footer-link">Dla Tłumaczy</span>
                   </NavLink>
-                  <NavLink to="/faq" className="nav-btn-desktop">
+                  <NavLink to={url.faq} className="nav-btn-desktop">
                     <span className="footer-link">FAQ</span>
                   </NavLink>
                   <a
@@ -50,7 +54,7 @@ const Footer = () => {
                   </a>
                 </div>
 
-                <NavLink to="/contact" className="nav-btn-desktop">
+                <NavLink to={url.contact} className="nav-btn-desktop">
                   <button className="footer-contact-btn">Skontaktuj się</button>
                 </NavLink>
               </div>
@@ -70,7 +74,7 @@ const Footer = () => {
                     <img src={googleIcon} alt="Google Icon" className="icon" />
                   </a>
                 </div>
-                <NavLink to="/policy" className="policy-link">
+                <NavLink to={url.policy} className="policy-link">
                   <span>Polityka prywatności</span>
                 </NavLink>
               </div>
@@ -94,22 +98,28 @@ const Footer = () => {
                 </div>
                 <div className="middle-footer-container">
                   <div className="aboutUs-offer-FAQ-translators-footer aboutUs-footer">
-                    <NavLink to="/" end className="nav-btn-desktop">
+                    <NavLink to={url.home} end className="nav-btn-desktop">
                       <span className="footer-link">O nas</span>
                     </NavLink>
-                    <NavLink to="/offer" className="nav-btn-desktop">
+                    <NavLink to={url.offer} className="nav-btn-desktop">
                       <span className="footer-link">Oferta</span>
                     </NavLink>
-                    <NavLink to="/fortranslators" className="nav-btn-desktop">
+                    <NavLink
+                      to={url.forTranslators}
+                      className="nav-btn-desktop"
+                    >
                       <span className="footer-link">Dla Tłumaczy</span>
                     </NavLink>
                   </div>
                   <div className="aboutUs-offer-FAQ-translators-footer aboutUs-right">
-                    <NavLink to="/contact?section=payments" className="nav-btn-desktop">
+                    <NavLink
+                      to="/tlumaczenia/kontakt#platnosci"
+                      className="nav-btn-desktop"
+                    >
                       <span className="footer-link">Płatności</span>
                     </NavLink>
 
-                    <NavLink to="/faq" className="nav-btn-desktop">
+                    <NavLink to={url.faq} className="nav-btn-desktop">
                       <span className="footer-link">FAQ</span>
                     </NavLink>
                     <a
@@ -120,7 +130,7 @@ const Footer = () => {
                     </a>
                   </div>
                 </div>
-                <NavLink to="/contact" className="nav-btn-desktop">
+                <NavLink to={url.contact} className="nav-btn-desktop">
                   <button className="footer-contact-btn">Skontaktuj się</button>
                 </NavLink>
               </div>
@@ -139,7 +149,7 @@ const Footer = () => {
                     <img src={googleIcon} alt="Google Icon" className="icon" />
                   </a>
                 </div>
-                <NavLink to="/policy" className="policy-link">
+                <NavLink to={url.policy} className="policy-link">
                   <span>Polityka prywatności</span>
                 </NavLink>
                 <span>Copyright &copy; {currentYear} DAG-MAR</span>

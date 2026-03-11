@@ -6,12 +6,13 @@ import Opinions from "./homeComponents/Opinions.js";
 import { useScrollTo } from "react-use-window-scroll";
 import WhoTrustedUs from "./homeComponents/WhoTrustedUs.js";
 import { NavLink } from "react-router-dom";
+import { url } from "../url.js";
 
 const Home = () => {
   const scrollTo = useScrollTo();
   const scrollDown = () => {
     scrollTo({
-      top: 850,
+      top: 750,
       left: 0,
       behavior: "smooth",
     });
@@ -33,7 +34,7 @@ const Home = () => {
             <strong> tłumaczenie</strong> z niemal{" "}
             <strong>każdego języka europejskiego</strong> i nie tylko.
           </h3>
-          <NavLink to="/offer" className="nav-btn-desktop">
+          <NavLink to={url.offer} className="nav-btn-desktop">
             <button className="see-offer">Zobacz ofertę</button>
           </NavLink>
         </div>
@@ -48,7 +49,7 @@ const Home = () => {
       <Dt />
       <Values />
       <Opinions />
-      <div className="test"></div>
+      {/* <div className="test"></div> */}
       <WhoTrustedUs />
     </div>
   );

@@ -42,3 +42,7 @@ strong {
 h1 strong {
   font-weight: bold;
 }
+
+.strong-bold {
+  font-weight: bold !important;
+}

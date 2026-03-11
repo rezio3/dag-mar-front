@@ -19,7 +19,9 @@ const Question2 = (props: any) => {
               }
             >
               <div className="visible-line">
-                <span className="visible-span-text">{props.header.quest}</span>
+                <span className="visible-span-text">
+                  <strong className="strong-bold">{props.header.quest}</strong>
+                </span>
                 <img
                   src={plus}
                   className={
@@ -85,7 +87,9 @@ const Question2 = (props: any) => {
           ) : (
             <div className="line" id={props.stateLine}>
               <div className="visible-line">
-                <span className="visible-span-text">{props.header.quest}</span>
+                <span className="visible-span-text">
+                  <strong className="strong-bold">{props.header.quest}</strong>
+                </span>
                 <img
                   src={plus}
                   className={

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "../../style/redSection.scss";
 import Media from "react-media";
+import { url } from "../../url";
 
 const RedSection = () => {
   return (
@@ -18,7 +19,7 @@ const RedSection = () => {
                 poprzez formularz kontaktowy, do którego prowadzi poniższy
                 przycisk.
               </span>
-              <NavLink to="/contact" className="nav-btn-desktop">
+              <NavLink to={url.contact} className="nav-btn-desktop">
                 <button className="write-us-btn">Napisz do nas</button>
               </NavLink>
             </div>
@@ -32,7 +33,7 @@ const RedSection = () => {
                 skontaktowania się z nami poprzez formularz kontaktowy, do
                 którego prowadzi poniższy przycisk.
               </span>
-              <NavLink to="/contact" className="nav-btn-desktop">
+              <NavLink to={url.contact} className="nav-btn-desktop">
                 <button className="write-us-btn">Napisz do nas</button>
               </NavLink>
             </div>

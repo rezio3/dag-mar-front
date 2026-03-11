@@ -34,6 +34,13 @@
     }
   }
 }
+.something-went-wrong-container {
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 @media (max-width: 992px) {
   .edit-news-container {
     padding: 20px;

@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "../style/forTranslators.scss";
 import TranslatorsFirstSection from "./translatorsComponents/TranslatorsFirstSection.tsx";
 import Media from "react-media";
+import { url } from "../url.ts";
 
 const Fortranslators = () => {
   return (
@@ -22,7 +23,7 @@ const Fortranslators = () => {
                   lub potrafiącą włączyć się do zespołu i jest zainteresowana/y
                   podjęciem współpracy z naszym Biurem zapraszamy do kontaktu.
                 </span>
-                <NavLink to="/contact" className="nav-btn-desktop">
+                <NavLink to={url.contact} className="nav-btn-desktop">
                   <button className="write-us-btn">Napisz do nas</button>
                 </NavLink>
               </div>
@@ -41,7 +42,7 @@ const Fortranslators = () => {
                   lub potrafiącą włączyć się do zespołu i jest zainteresowana/y
                   podjęciem współpracy z naszym Biurem zapraszamy do kontaktu.
                 </span>
-                <NavLink to="/contact" className="nav-btn-desktop">
+                <NavLink to={url.contact} className="nav-btn-desktop">
                   <button className="write-us-btn">Napisz do nas</button>
                 </NavLink>
               </div>

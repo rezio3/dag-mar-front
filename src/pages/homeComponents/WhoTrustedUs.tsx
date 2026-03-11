@@ -28,10 +28,9 @@ const logos = [
 const WhoTrustedUs = () => {
   return (
     <div className="who-trusted-us-container">
-      <h1 className="who-trusted-us-header">Zaufali nam</h1>
+      <h2 className="who-trusted-us-header">Zaufali nam</h2>
       <div className="trusted-logos">
         <div className="trusted-logos-track">
-          {/* powielamy loga dwa razy, by animacja była płynna */}
           {[...logos, ...logos].map((logo, index) => (
             <img key={index} src={logo} alt="logo" className="logo" />
           ))}

@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Policy from "../pages/Policy";
 import EditNewsLogin from "../pages/EditNews/EditNewsLogin";
 import NewsAdminEdit from "../pages/EditNews/NewsAdminEdit";
+import { url } from "../url";
 
 const Page = () => {
   window.onscroll = () => {
@@ -31,11 +32,11 @@ const Page = () => {
       <div className="page-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/offer" element={<Offer />} />
-          <Route path="/fortranslators" element={<Fortranslators />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/policy" element={<Policy />} />
+          <Route path={url.offer} element={<Offer />} />
+          <Route path={url.forTranslators} element={<Fortranslators />} />
+          <Route path={url.faq} element={<Faq />} />
+          <Route path={url.contact} element={<Contact />} />
+          <Route path={url.policy} element={<Policy />} />
           <Route
             path="/admin"
             element={

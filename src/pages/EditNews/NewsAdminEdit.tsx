@@ -136,15 +136,7 @@ const NewsAdminEdit = () => {
           </Snackbar>
         </div>
       ) : (
-        <div
-          style={{
-            marginTop: 300,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
+        <div className="something-went-wrong-container">
           <h3>Coś poszło nie tak...</h3>
           <Button variant="outlined" type="submit" onClick={handleLogout}>
             Logout

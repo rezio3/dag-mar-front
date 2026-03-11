@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-// import { useSpring, animated } from "react-spring";
 import { useSpring, animated } from "@react-spring/web";
 import Media from "react-media";
 import "../../style/stats.scss";
@@ -11,12 +10,7 @@ const Number = ({ n }: { n: number }) => {
     delay: 100,
     config: { mass: 1, tension: 20, friction: 10 },
   });
-  return (
-    <animated.div>
-      {num.to((n) => n.toFixed(0))}
-      {/* <span></span> */}
-    </animated.div>
-  );
+  return <animated.div>{num.to((n) => n.toFixed(0))}</animated.div>;
 };
 const Stats = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,13 +24,8 @@ const Stats = () => {
       { threshold: 0.2 }
     );
     if (myRef.current) {
-      observer.observe(myRef.current); // ✅ tylko jeśli nie null
+      observer.observe(myRef.current);
     }
-    // return () => {
-    //   if (myRef.current) {
-    //     observer.unobserve(myRef.current); // ✅ też tylko jeśli nie null
-    //   }
-    // };
   }, []);
   const date = new Date();
   const yearsOfExperience = date.getFullYear() - 2000;

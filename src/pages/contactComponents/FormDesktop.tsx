@@ -6,6 +6,7 @@ import {
   type UseFormHandleSubmit,
 } from "react-hook-form";
 import { NavLink } from "react-router-dom";
+import { url } from "../../url";
 
 type FormDesktopProps = {
   control: Control<ContactFormData>;
@@ -109,7 +110,7 @@ const FormDesktop: React.FC<FormDesktopProps> = ({
               <span className="policy">
                 Klikając Prześlij formularz zgadzasz się na przetwarzanie danych
                 osobowych, zawartych w{" "}
-                <NavLink to="/policy">Polityce prywatności</NavLink>.
+                <NavLink to={url.policy}>Polityce prywatności</NavLink>.
               </span>
 
               <span className="pole">*Pole obowiązkowe</span>

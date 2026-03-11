@@ -2,6 +2,7 @@ import DTimage from "../../img/DT.png";
 import Media from "react-media";
 import "../../style/dt.scss";
 import { NavLink } from "react-router-dom";
+import { url } from "../../url";
 
 const Dt = () => {
   return (
@@ -12,7 +13,7 @@ const Dt = () => {
             <section className="mgr-Dagmara-Toporowska-container" id="section3">
               <div className="DT-container">
                 <div className="DT-img">
-                  <img src={DTimage} className="DTimage" />
+                  <img src={DTimage} alt="DT image" className="DTimage" />
                 </div>
                 <div className="DT-description">
                   <h2>O NAS</h2>
@@ -45,7 +46,7 @@ const Dt = () => {
                     nas priorytetem, dlatego też dołożymy wszelkich starań by
                     Państwa usatysfakcjonować.
                   </p>
-                  <NavLink to="/offer" className="nav-btn-desktop">
+                  <NavLink to={url.offer} className="nav-btn-desktop">
                     <button className="see-offer2">Zobacz ofertę</button>
                   </NavLink>
                 </div>
@@ -89,7 +90,11 @@ const Dt = () => {
                     <button className="see-offer2">Zobacz ofertę</button>
                     <div className="DT-img-container">
                       <div className="DT-img">
-                        <img src={DTimage} className="DTimage" />
+                        <img
+                          src={DTimage}
+                          alt="Person image"
+                          className="DTimage"
+                        />
                       </div>
                     </div>
                   </div>
