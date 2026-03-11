@@ -216,7 +216,7 @@ const Opinions = () => {
                   </div>
                 </div>
                 <div className="segments-container">
-                  {opinionsData.map((e, index) => {
+                  {opinionsData.map((_, index) => {
                     return (
                       <OpinionSegments
                         style={{
@@ -303,7 +303,7 @@ const Opinions = () => {
                   </div>
                 </div>
                 <div className="segments-container">
-                  {opinionsData.map((e, index) => {
+                  {opinionsData.map((_, index) => {
                     return (
                       <OpinionSegments
                         style={{
