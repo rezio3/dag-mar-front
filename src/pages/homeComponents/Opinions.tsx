@@ -11,7 +11,7 @@ const Opinions = () => {
       author: `ILONA`,
     },
     {
-      opinionText: `Nasza firma jest bardzo zadowolona ze współpracy z biurem Pani Dagmary. Tłumaczeniasą wykonywane szybko i profesjonalnie, zarówno standardowe jak i techniczne. Ceny są bardzo konkurencyjne w porównaniu z innymi biurami tłumaczeniowymi. Nie ma problemu z kontaktem z Panią Dagmarą, odpowiada nawet będąc na urlopie za co dziękujemy i jednocześnie przepraszamy za zakłócenia urlopowe :) Biuro godne polecenia na 100%!`,
+      opinionText: `Nasza firma jest bardzo zadowolona ze współpracy z biurem Pani Dagmary. Tłumaczenia są wykonywane szybko i profesjonalnie, zarówno standardowe jak i techniczne. Ceny są bardzo konkurencyjne w porównaniu z innymi biurami tłumaczeniowymi. Nie ma problemu z kontaktem z Panią Dagmarą, odpowiada nawet będąc na urlopie za co dziękujemy i jednocześnie przepraszamy za zakłócenia urlopowe :) Biuro godne polecenia na 100%!`,
       author: `JOLANTA KASZA`,
     },
     {
